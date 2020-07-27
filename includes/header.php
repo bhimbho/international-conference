@@ -1,3 +1,14 @@
+<?php session_start(); 
+include('classes/autoload.php');
+admin_autoloader_no_step();
+$conference = new conference;
+$speakers = new speakers;
+$guideline = new guideline;
+$hotel = new hotel;
+$reg_fee =  new registration_fee;
+$journal =  new journal;
+$venue =  new venue;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -31,8 +42,8 @@
 				<div class="row align-items-center">
 					<div class="col-12 col-md-6 col-lg-3 logo-two-cover">
 						<a href="index.html" class="logo-footer">
-							<img src="assets/img/logo-2.svg" alt="logo">
-							<div class="logo-text"><span>info</span>rmex</div>
+							<img src="assets/img/logo.png" alt="logo">
+							<div class="logo-text"><span>INtl.</span>Conference</div>
 						</a>
 					</div>
 					<div class="col-3 header-top-info"></div>
@@ -58,7 +69,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="col-2">
+					<!-- <div class="col-2">
 						<div class="header-two-search">
 							<div class="header-search-icon">
 								<i class="fas fa-search"></i>
@@ -68,7 +79,7 @@
 								<button class="btn-search rounded-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 							</form>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

@@ -14,7 +14,7 @@ include "includes/header.php";
 						<h2><span>Conference on Software</span>Engineering Practices</h2>
 						<div class="slide-tag">#Web_Conference</div>
 						<div class="slide-btn-cover">
-							<a href="single-events.html" class="btn btn-yellow rounded-0">register now</a>
+							<a href="register.php" class="btn btn-yellow rounded-0">register now</a>
 							<a href="single-events.html" class="btn btn-border rounded-0">more details</a>
 						</div>
 					</div>
@@ -30,7 +30,7 @@ include "includes/header.php";
 						<h2><span>Technology in</span>The Banking Sector</h2>
 						<div class="slide-tag">#Web_Conference</div>
 						<div class="slide-btn-cover">
-							<a href="single-events.html" class="btn btn-yellow rounded-0">register now</a>
+							<a href="register.php" class="btn btn-yellow rounded-0">register now</a>
 							<a href="single-events.html" class="btn btn-border rounded-0">more details</a>
 						</div>
 					</div>
@@ -46,7 +46,7 @@ include "includes/header.php";
 						<h2><span>Ultimate Skills For an</span>Start in IT Recruiting</h2>
 						<div class="slide-tag">#Web_Conference</div>
 						<div class="slide-btn-cover">
-							<a href="single-events.html" class="btn btn-yellow rounded-0">register now</a>
+							<a href="register.php" class="btn btn-yellow rounded-0">register now</a>
 							<a href="single-events.html" class="btn btn-border rounded-0">more details</a>
 						</div>
 					</div>
@@ -98,61 +98,22 @@ include "includes/header.php";
 			<h2 class="title-line">Our Speakers</h2>
 			<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>
 			<div class="our-speakers-cover">
+				<?php
+					$speaker = $speakers->all_speakers_limit();
+					foreach ($speaker as $speaker) {?>
+					
 				<div class="speaker-item">
 					<div class="speaker-item-img">
-						<img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/speaker-1.jpg" alt="img">
+						<img class="lazy" src="uploads/speakers_picture/<?= $speaker->picture ?>" data-src="uploads/speakers_picture/<?= $speaker->picture ?>" alt="img">
 					</div>
 					<div class="speaker-item-content">
-						<h3>Anthony Watson</h3>
-						<div class="prof">CEO, IT Metrix</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<h3><?= $speaker->name ?></h3>
+						<div class="prof"><?= $speaker->type ?></div>
+						<p><?= $speaker->profile ?></p>
 						
 					</div>
 				</div>
-				<div class="speaker-item">
-					<div class="speaker-item-img">
-						<img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/speaker-2.jpg" alt="img">
-					</div>
-					<div class="speaker-item-content">
-						<h3>Marybeth Hoover</h3>
-						<div class="prof">CEO, IT Metrix</div>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</p>
-						
-					</div>
-				</div>
-				<div class="speaker-item">
-					<div class="speaker-item-img">
-						<img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/speaker-3.jpg" alt="img">
-					</div>
-					<div class="speaker-item-content">
-						<h3>Stewart Collins</h3>
-						<div class="prof">CEO, IT Metrix</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-						
-					</div>
-				</div>
-				<div class="speaker-item">
-					<div class="speaker-item-img">
-						<img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/speaker-4.jpg" alt="img">
-					</div>
-					<div class="speaker-item-content">
-						<h3>Theodora Reed</h3>
-						<div class="prof">CEO, IT Metrix</div>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</p>
-						
-					</div>
-				</div>
-				<div class="speaker-item">
-					<div class="speaker-item-img">
-						<img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/speaker-5.jpg" alt="img">
-					</div>
-					<div class="speaker-item-content">
-						<h3>Ronald Stanley</h3>
-						<div class="prof">CEO, IT Metrix</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-						
-					</div>
-				</div>
+			<?php }?>
 			</div>
 		</div>
 	</section>
@@ -163,63 +124,22 @@ include "includes/header.php";
 		<span class="title-position title-position-left">Program</span>
 		<div class="container">
 			<h2 class="title-line">Schedule of Event</h2>
-			<p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			<!-- <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
 			<ul class="schedule-cover">
-				<li class="active">
-					<div class="schedule-header">
-						<div class="schedule-time">10:00-11:00</div>
-						<div class="schedule-title">Check-in. morning coffee</div>
-						<i class="fa fa-chevron-left" aria-hidden="true"></i>
-					</div>
-					<div class="schedule-content">
-						<h3 class="title">Good Service: Detect and avoid errors in the world of microservices</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</li>
+				<?php
+					$conf = $conference->all_conference_date('ASC');
+					foreach ($conf as $conf) {?>
 				<li>
 					<div class="schedule-header">
-						<div class="schedule-time">11:00-12:00</div>
-						<div class="schedule-title">Anthony Watson</div>
+						<div class="schedule-time"><?= $conf->date ?></div>
+						<div class="schedule-title"><?= $conf->event ?></div>
 						<i class="fa fa-chevron-left" aria-hidden="true"></i>
 					</div>
 					<div class="schedule-content">
-						<h3 class="title">Good Service: Detect and avoid errors in the world of microservices</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						
 					</div>
 				</li>
-				<li>
-					<div class="schedule-header">
-						<div class="schedule-time">12:00-13:00</div>
-						<div class="schedule-title">lorem ipsum</div>
-						<i class="fa fa-chevron-left" aria-hidden="true"></i>
-					</div>
-					<div class="schedule-content">
-						<h3 class="title">Good Service: Detect and avoid errors in the world of microservices</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</li>
-				<li>
-					<div class="schedule-header">
-						<div class="schedule-time">13:00-14:00</div>
-						<div class="schedule-title">dolor sit amet</div>
-						<i class="fa fa-chevron-left" aria-hidden="true"></i>
-					</div>
-					<div class="schedule-content">
-						<h3 class="title">Good Service: Detect and avoid errors in the world of microservices</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</li>
-				<li>
-					<div class="schedule-header">
-						<div class="schedule-time">14:00-15:00</div>
-						<div class="schedule-title">sed do eiusmod tempor incididunt</div>
-						<i class="fa fa-chevron-left" aria-hidden="true"></i>
-					</div>
-					<div class="schedule-content">
-						<h3 class="title">Good Service: Detect and avoid errors in the world of microservices</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</li>
+			<?php }?>
 			</ul>
 		</div>
 	</section>
@@ -232,11 +152,11 @@ include "includes/header.php";
 				<div class="col-12 col-sm-4">
 					<h2 class="title-line-left">Venue</h2>
 					<ul>
-						<li><i class="fas fa-map-marker-alt"></i>7100 Athens Place Washington, DC 20521</li>
-						<li><i class="fas fa-street-view"></i>AMA Conference Center Hall #1, 6th floor</li>
+						<li><i class="fas fa-map-marker-alt"></i><?= $venue->view_venue()->venue_address ?></li>
+						<li><i class="fas fa-street-view"></i><?= $venue->view_venue()->venue_hall ?></li>
 					</ul>
 				</div>
-				<div class="col-12 col-sm-8"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/venue-img.jpg" alt="img"></div>
+				<div class="col-12 col-sm-8"><img class="lazy" src="uploads/venue/<?= $venue->view_venue()->venue_picture ?>" data-src="uploads/venue/<?= $venue->view_venue()->venue_picture ?>" alt="venue_image"></div>
 			</div>
 		</div>
 	</section>

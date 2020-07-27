@@ -22,26 +22,21 @@ include "includes/header.php";
 			<h2 class="title-line">Our Speakers</h2>
 			<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>
 			<div class="our-speakers-cover">
+				<?php
+					$speaker = $speakers->all_speakers();
+					foreach ($speaker as $speaker) {?>
 				<div class="speaker-item">
 					<div class="speaker-item-img">
-						<img src="assets/img/speaker-1.jpg" alt="img">
+						<img class="lazy" src="uploads/speakers_picture/<?= $speaker->picture ?>" data-src="uploads/speakers_picture/<?= $speaker->picture ?>" alt="img">
 					</div>
 					<div class="speaker-item-content">
-						<h3>Anthony Watson</h3>
-						<div class="prof">CEO, IT Metrix</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<h3><?= $speaker->name ?></h3>
+						<div class="prof"><?= $speaker->type ?></div>
+						<p><?= $speaker->profile ?></p>
+						
 					</div>
 				</div>
-				<div class="speaker-item">
-					<div class="speaker-item-img">
-						<img src="assets/img/speaker-2.jpg" alt="img">
-					</div>
-					<div class="speaker-item-content">
-						<h3>Marybeth Hoover</h3>
-						<div class="prof">CEO, IT Metrix</div>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</p>
-					</div>
-				</div>
+			<?php }?>
 			</div>
 		</div>
 	</section>
