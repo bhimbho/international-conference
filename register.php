@@ -51,7 +51,12 @@ include "includes/header.php";
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" name="" class="form-control rounded-0" placeholder="Pages">
+								<input type="text" name="" class="form-control rounded-0" placeholder="150">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea class="form-control rounded-0" rows="8" style="resize: none" name="authors" placeholder="Authors"></textarea>
 							</div>
 						</div>
 						<div class="col-md-12">

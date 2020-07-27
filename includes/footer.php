@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<a href="index.html" class="logo-footer">
-						<img src="assets/img/logo-footer.svg" alt="logo">
+						<img src="assets/img/logo.png" alt="logo">
 						<div class="logo-text"><span>info</span>rmex</div>
 					</a>
 					<div class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div>

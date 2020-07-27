@@ -34,31 +34,20 @@ include "includes/header.php";
 						</tr>
 					</thead>
 					<tbody>
+						 <?php
+                                $hotels = $hotel->all_hotels('DESC');
+                                $count = 0;
+                                foreach ($hotels as $hotels) {?>
+
 						<tr>
-							<th>1</th>
-							<td>IBD Hotel</td>
-							<td>Min &#8358;10,000</td>
-							<td>Min 5</td>
-							<td>Express Road, Ilaro</td>
-							<td>08123456789</td>
+							<th><?= ++$count ?></th>
+							<td><?= $hotels->hotel_name ?></td>
+							<td><?= $hotels->location ?></td>
+							<td><?= html_entity_decode($hotels->room) ?></td>
+							<td><?= html_entity_decode($hotels->rate) ?></td>
+							<td><?= $hotels->contact ?></td>
 						</tr>
-						<tr>
-							<th>2</th>
-							<td>IBD Hotel</td>
-							<td>Min &#8358;10,000</td>
-							<td>Min 5</td>
-							<td>Express Road, Ilaro</td>
-							<td>08123456789</td>
-						</tr>
-						<tr>
-							<th>3</th>
-							<td>IBD Hotel</td>
-							<td>Min &#8358;10,000</td>
-							<td>Min 5</td>
-							<td>Express Road, Ilaro</td>
-							<td>08123456789</td>
-						</tr>
-						
+						<?php }?>
 					</tbody>
 				</table>
 			</div>
