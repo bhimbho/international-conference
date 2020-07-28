@@ -59,6 +59,12 @@
                         <span> Upload Papers </span>
                     </a>
                 </li>
+                <li>
+                    <a href="call-for-paper.php">
+                        <i class="dripicons-document"></i>
+                        <span> Call for Papers</span>
+                    </a>
+                </li>
 
             </ul>
         </div>

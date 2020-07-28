@@ -62,6 +62,15 @@ $venue =  new venue;
 							<ul class="nav-list">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="about.php">About us</a></li>
+								<li class="dropdown">
+									<a href="#">Authors <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<ul>
+										<li><a href="guideline.php">Guidelines</a></li>
+										<li><a href="journal.php">Journals</a></li>
+										<li><a href="call-for-papers.php">Call for paper</a></li>
+										<li><a href="registration-fee.php">Registration Fee</a></li>
+									</ul>
+								</li>
 								<li><a href="speakers.php">Speakers</a></li>
 								<li><a href="schedule.php">Schedule</a></li>
 								<li><a href="hotels.php">Hotels</a></li>
