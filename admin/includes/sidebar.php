@@ -65,6 +65,18 @@
                         <span> Call for Papers</span>
                     </a>
                 </li>
+                <li>
+                    <a href="sponsors.php">
+                        <i class="dripicons-user"></i>
+                        <span> Sponsors </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="venue.php">
+                        <i class="dripicons-document"></i>
+                        <span> Venue </span>
+                    </a>
+                </li>
 
             </ul>
         </div>

@@ -57,13 +57,13 @@ class journal extends db{
         }
     }
 
-     public function add_journal($title,$abstract,$file,$pages,$authors,$fname,$lname,$email,$phone){ 
+     public function add_journal($title,$abstract,$file,$pages,$authors,$fname,$lname,$email,$phone,$institution){ 
      	/**
 		*
 		*
 		**/
 		$now = date('Y-m-d');
-        if($query = $this->execute("INSERT INTO journal(`title`, `abstract`, `file`, `page_no`, `authors`, `firstname`, `lastname`, `email`, `phone`, `upload_date`, `publish_date`) VALUES (?,?,?,?,?,?,?,?,?,?,?)", [$title,$abstract,$file,$pages,$authors,$fname,$lname,$email,$phone,$now,$now])){
+        if($query = $this->execute("INSERT INTO journal(`title`, `abstract`, `file`, `page_no`, `authors`, `firstname`, `lastname`, `email`, `phone`,`institution`, `upload_date`) VALUES (?,?,?,?,?,?,?,?,?,?,?)", [$title,$abstract,$file,$pages,$authors,$fname,$lname,$email,$phone,$institution,$now])){
         	return true;
         }
         else{
@@ -93,6 +93,12 @@ class journal extends db{
     public function view_all_new_journals(){ 
         $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id ORDER BY new_upload_id ASC", []);
         return $this->f_all();
+    }
+
+    public function view_specific_new_journal($id){ 
+        $id = DB::Validate($id);
+        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id WHERE new_upload_id =? ORDER BY new_upload_id ASC", [$id]);
+        return $this->f_one();
     }
 
     public function search_by_title_author_institution($search_val){ 

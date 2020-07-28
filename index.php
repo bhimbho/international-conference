@@ -166,12 +166,12 @@ include "includes/header.php";
 	<section class="s-partners partners-home-two">
 		<div class="container">
 			<div class="row">
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-1.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-2.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-3.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-4.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-5.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-6.png" alt="img"></div>
+				<?php 
+					$sponsor = $sponsors->all_sponsor();
+					foreach ($sponsor as $sponsor) {
+					?>
+				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="uploads/sponsors/<?= $sponsor->sponsor_img?>" data-src="uploads/sponsors/<?= $sponsor->sponsor_img?>" alt="img"></div>
+			<?php }?>
 			</div>
 		</div>
 	</section>

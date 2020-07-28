@@ -7,6 +7,8 @@ $guideline = new guideline;
 $hotel = new hotel;
 $reg_fee =  new registration_fee;
 $journal =  new journal;
+$sponsor =  new sponsor;
+$venue =  new venue;
 ?>
 <!DOCTYPE html>
 <html lang="en">

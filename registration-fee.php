@@ -31,17 +31,20 @@ include "includes/header.php";
 							<div class="col-md-8">
 								<h4>Bank Details</h4>
 								<table class="table">
+									<?php
+										$reg_fee = $reg_fee->view_reg_fee();
+									?>
 									<tr>
 										<td><span class="font-weight-bold">Bank Name: </span></td>
-										<td><span> POLARIS</span></td>
+										<td><span> <?= $reg_fee->bank ?></span></td>
 									</tr>
 									<tr>
 										<td><span class="font-weight-bold">Account Name: </span></td>
-										<td><span> Women in Technical Education and Employment (WITED)</span></td>
+										<td><span> <?= $reg_fee->account_name ?></span></td>
 									</tr>
 									<tr>
 										<td><span class="font-weight-bold">Account Number: </span></td>
-										<td><span> 1140181863</span></td>
+										<td><span> <?= $reg_fee->account_number ?></span></td>
 									</tr>
 								</table>
 							</div>

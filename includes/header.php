@@ -8,6 +8,7 @@ $hotel = new hotel;
 $reg_fee =  new registration_fee;
 $journal =  new journal;
 $venue =  new venue;
+$sponsors =  new sponsor;
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -72,7 +73,7 @@ $venue =  new venue;
 									</ul>
 								</li>
 								<li><a href="speakers.php">Speakers</a></li>
-								<li><a href="schedule.php">Schedule</a></li>
+								<!-- <li><a href="schedule.php">Schedule</a></li> -->
 								<li><a href="hotels.php">Hotels</a></li>
 								<li><a href="contacts.php">Contacts</a></li>
 							</ul>
