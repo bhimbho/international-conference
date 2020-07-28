@@ -7,7 +7,7 @@ session_start();
 	if(isset($_POST['submit'])){
 		$arr_data = [];
 		foreach ($_POST as $post => $val) {
-			array_push($arr_data,$guideline->text_val($val));
+			array_push($arr_data,htmlspecialchars($val));
 		}
 		// var_dump($arr_data[0]);
 		// $obj = json_decode(json_encode($arr_data), true);

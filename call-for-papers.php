@@ -21,20 +21,7 @@ include "includes/header.php";
 	<div class="container">
 		<h2 class="title-line-left">Publication Archives</h2>
 		<div class="row">
-			<div class="col-md-4 archves">
-				<div class="card">
-					<div class="card-body">
-						<ul>
-							<li><a href="">Issue 1, July, 2020</a></li>
-							<li><a href="">Issue 1, July, 2020</a></li>
-							<li><a href="">Issue 1, July, 2020</a></li>
-							<li><a href="">Issue 1, July, 2020</a></li>
-							<li><a href="">Issue 1, July, 2020</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-8">
+			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-6 mb-3">
 						<div class="card">
