@@ -22,35 +22,32 @@ include "includes/header.php";
 		<h2 class="title-line-left">Journals</h2>
 		<div class="row">
 			<div class="col-md-8">
+				<?php
+						if(isset($_POST['send'])){
+							$get_new_journals = $journal->search_by_title_author_institution($_POST['search']);
+						}
+						else{
+							$get_new_journals = $journal->view_all_new_journals();
+						}
+						foreach ($get_new_journals as $get_new_journals) { ?>
 				<div class="row journal-holder">
 					<div class="col-md-3">
 						<img src="assets/img/about-1.jpg" class="img-fluid">
 					</div>
 					<div class="col-md-9">
-						<a href="view-journal.php" class="font-weight-bold h5 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="" class="btn mt-3 rounded-0">Download Journal</a>
+						<a href="view-journal.php" class="font-weight-bold h5 mb-3"><?= $get_new_journals->title?></a>
+						<p><?= substr($get_new_journals->abstract, 0, 150).'....' ?></p>
+						<a href="uploads/new_uploads/<?= $get_new_journals->file_name?>" class="btn mt-3 rounded-0">Download Journal</a>
 					</div>
-				</div>
-				<div class="row journal-holder">
-					<div class="col-md-3">
-						<img src="assets/img/about-1.jpg" class="img-fluid">
-					</div>
-					<div class="col-md-9">
-						<a href="" class="font-weight-bold h5 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="" class="btn mt-3 rounded-0">Download Journal</a>
-					</div>
-				</div>					
+				</div>	
+				<?php }?>		
 			</div>
 			<div class="col-md-4">
 				<h4 class="title-line-left mb-3">Search Journals</h4>
-				<form>
+				<form action="" method="post">
 					<div class="input-group">
-						<input type="text" name="" class="form-control search-input rounded-0">
-						<button class="btn search-btn input-control rounded-0"> <i class="fa fa-search"></i></button>
+						<input type="text" name="search" class="form-control search-input rounded-0">
+						<button class="btn search-btn input-control rounded-0" name="send"> <i class="fa fa-search"></i></button>
 					</div>
 				</form>
 				<hr>

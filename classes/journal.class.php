@@ -91,7 +91,13 @@ class journal extends db{
     }
 
     public function view_all_new_journals(){ 
-        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id ORDER BY new_upload_id DESC", []);
+        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id ORDER BY new_upload_id ASC", []);
+        return $this->f_all();
+    }
+
+    public function search_by_title_author_institution($search_val){ 
+        $search_val = DB::text_val($search_val);
+        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id WHERE MATCH(`journal`.`title`,`journal`.`authors`,`journal`.`institution`) AGAINST(? IN NATURAL LANGUAGE MODE)", [$search_val]);
         return $this->f_all();
     }
 
