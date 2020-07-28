@@ -22,24 +22,32 @@ include "includes/header.php";
 		<h2 class="title-line-left">Registration Fee</h2>
 		<div class="row">
 			<div class="col-md-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-4" style="border-right: 1px solid lightgray">
+								<img src="assets/img/payment.png" class="img-fluid">
+							</div>
+							<div class="col-md-8">
+								<h4>Bank Details</h4>
+								<table class="table">
+									<tr>
+										<td><span class="font-weight-bold">Bank Name: </span></td>
+										<td><span> POLARIS</span></td>
+									</tr>
+									<tr>
+										<td><span class="font-weight-bold">Account Name: </span></td>
+										<td><span> Women in Technical Education and Employment (WITED)</span></td>
+									</tr>
+									<tr>
+										<td><span class="font-weight-bold">Account Number: </span></td>
+										<td><span> 1140181863</span></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			
 		</div>
