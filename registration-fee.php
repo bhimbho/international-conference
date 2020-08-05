@@ -3,7 +3,7 @@ include "includes/header.php";
 ?>
 
 <!--=================== PAGE-TITLE ===================-->
-<div class="page-title" style="background-image: url(assets/img/bg-page-title.jpg);">
+<div class="page-title" style="background-image: url(assets/img/bg-head.jpg);">
 	<div class="container">
 		<h1 class="title-line-left">Registration Fee</h1>
 		<div class="breadcrumbs">
@@ -31,17 +31,20 @@ include "includes/header.php";
 							<div class="col-md-8">
 								<h4>Bank Details</h4>
 								<table class="table">
+									<?php
+										$reg_fee = $reg_fee->view_reg_fee();
+									?>
 									<tr>
 										<td><span class="font-weight-bold">Bank Name: </span></td>
-										<td><span> POLARIS</span></td>
+										<td><span> <?= $reg_fee->bank ?></span></td>
 									</tr>
 									<tr>
 										<td><span class="font-weight-bold">Account Name: </span></td>
-										<td><span> Women in Technical Education and Employment (WITED)</span></td>
+										<td><span> <?= $reg_fee->account_name ?></span></td>
 									</tr>
 									<tr>
 										<td><span class="font-weight-bold">Account Number: </span></td>
-										<td><span> 1140181863</span></td>
+										<td><span> <?= $reg_fee->account_number ?></span></td>
 									</tr>
 								</table>
 							</div>

@@ -8,6 +8,8 @@ $hotel = new hotel;
 $reg_fee =  new registration_fee;
 $journal =  new journal;
 $venue =  new venue;
+$sponsors =  new sponsor;
+$about =  new about;
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -41,15 +43,15 @@ $venue =  new venue;
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-12 col-md-6 col-lg-3 logo-two-cover">
-						<a href="index.html" class="logo-footer">
+						<a href="/index.php" class="logo-footer">
 							<img src="assets/img/logo.png" alt="logo">
-							<div class="logo-text"><span>INtl.</span>Conference</div>
+							<div class="logo-text" style="font-size: 20px"><span>INtl.</span>Conference</div>
 						</a>
 					</div>
 					<div class="col-3 header-top-info"></div>
-					<div class="col-3 header-top-info"></div>
-					<div class="col-12 col-sm-6 col-lg-3 header-two-btn">
-						<a href="register.php" class="btn">register</a>
+					<div class="col-2 header-top-info"></div>
+					<div class="col-12 col-sm-6 col-lg-4 header-two-btn">
+						<a href="register.php" class="btn">Registration/Submission</a>
 					</div>
 				</div>
 			</div>
@@ -66,14 +68,14 @@ $venue =  new venue;
 									<a href="#">Authors <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul>
 										<li><a href="guideline.php">Guidelines</a></li>
-										<li><a href="journal.php">Journals</a></li>
+										<li><a href="conference-papers.php">Conference Papers</a></li>
 										<li><a href="call-for-papers.php">Call for paper</a></li>
 										<li><a href="registration-fee.php">Registration Fee</a></li>
 									</ul>
 								</li>
 								<li><a href="speakers.php">Speakers</a></li>
-								<li><a href="schedule.php">Schedule</a></li>
-								<li><a href="hotels.php">Hotels</a></li>
+								<!-- <li><a href="schedule.php">Schedule</a></li> -->
+								<!-- <li><a href="hotels.php">Hotels</a></li> -->
 								<li><a href="contacts.php">Contacts</a></li>
 							</ul>
 						</nav>

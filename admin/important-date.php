@@ -38,11 +38,15 @@
                         <form method="post" action="logic/add_imp_dates.php">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Event Title</label>
-                                <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Enter Event Title">
+                                <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Enter Title">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Event Date</label>
-                                <input type="text" class="form-control" name="date" aria-describedby="emailHelp" placeholder="Enter Event Date">
+                                <input type="text" class="form-control" name="date" aria-describedby="emailHelp" placeholder="Enter Date">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Event Description</label>
+                                <input type="text" class="form-control" name="desc" aria-describedby="emailHelp" placeholder="Enter Description">
                             </div>
                             <div class="form-group">
                                <button type="submit" name="submit" class="btn btn-primary btn-block">Add Date</button>

@@ -12,7 +12,7 @@ session_start();
 		// $obj = json_decode(json_encode($arr_data), true);
 		// $obj->fname;
 		// var_dump($arr_data);
-			if($conference->add_conference_date($arr_data[0],$arr_data[1])){
+			if($conference->add_conference_date($arr_data[0],$arr_data[1],$arr_data[2])){
 				$_SESSION['success'] = "Conference Date Added";
 				header("location: ../important-date.php");
 			}

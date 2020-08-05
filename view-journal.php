@@ -3,13 +3,13 @@ include "includes/header.php";
 ?>
 
 <!--=================== PAGE-TITLE ===================-->
-<div class="page-title" style="background-image: url(assets/img/bg-page-title.jpg);">
+<div class="page-title" style="background-image: url(assets/img/bg-head.jpg);">
 	<div class="container">
-		<h1 class="title-line-left">View Journal</h1>
+		<h1 class="title-line-left">View Paper</h1>
 		<div class="breadcrumbs">
 			<ul>
 				<li><a href="index.php">Home</a></li>
-				<li>View Journal</li>
+				<li>View Paper</li>
 			</ul>
 		</div>
 	</div>
@@ -19,28 +19,14 @@ include "includes/header.php";
 <!--================= PAGE-CONTACTS =================-->
 <section class="page-contacts">
 	<div class="container">
-		<h4 class="title-line-left">Journal Title</h4>
-		<p class="font-weight-bold">Abosede Ifeoluwa Adelusi, Volume 1 Issue 1, July 2020 Pages 1-8, Published: 2020-07-25</p>
+		<?php
+			$pull = $journal->view_specific_new_journal($_GET['pull']);
+		?>
+		<h4 class="title-line-left"><?= $pull->title ?></h4>
+		<p class="font-weight-bold"><?= $pull->authors ?>, July 2020 Pages<?= $pull->page_no ?>, Published: <?= $pull->date_upload_created ?></p>
 		<div class="row">
 			<div class="col-md-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<?= htmlspecialchars_decode($pull->abstract) ?>
 			</div>
 			
 		</div>

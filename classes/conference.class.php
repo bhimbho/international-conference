@@ -40,9 +40,9 @@ class conference extends db
 
 
 	//--------------------- conference dates -------------------
-	public function add_conference_date($event, $date)
+	public function add_conference_date($event, $date,$desc)
 	{
-		$query = $this->execute("INSERT INTO `conference_date`(`event`, `date`) VALUES (?,?)", [$event,$date]);
+		$query = $this->execute("INSERT INTO `conference_date`(`event`, `date`,`description`) VALUES (?,?,?)", [$event,$date,$desc]);
         return ($query)? true : false;
 	}
 

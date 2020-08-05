@@ -3,7 +3,7 @@ include "includes/header.php";
 ?>
 
 	<!--=================== PAGE-TITLE ===================-->
-	<div class="page-title" style="background-image: url(assets/img/bg-page-title.jpg);">
+	<div class="page-title" style="background-image: url(assets/img/bg-head.jpg);">
 		<div class="container">
 			<h1 class="title-line-left">Speakers</h1>
 			<div class="breadcrumbs">
@@ -33,7 +33,7 @@ include "includes/header.php";
 						<h3><?= $speaker->name ?></h3>
 						<div class="prof"><?= $speaker->type ?></div>
 						<p><?= $speaker->profile ?></p>
-						
+						<a href="speaker-profile.php" class="btn btn-yellow">Profile</a>
 					</div>
 				</div>
 			<?php }?>

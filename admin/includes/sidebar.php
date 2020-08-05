@@ -12,6 +12,18 @@
                     </a>
                 </li>
                 <li>
+                    <a href="welcome.php">
+                        <i class="dripicons-document"></i>
+                        <span> Welcome Message </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.php">
+                        <i class="dripicons-document"></i>
+                        <span> About </span>
+                    </a>
+                </li>
+                <li>
                     <a href="conference.php">
                         <i class="dripicons-meter"></i>
                         <span> Conference </span>
@@ -63,6 +75,18 @@
                     <a href="call-for-paper.php">
                         <i class="dripicons-document"></i>
                         <span> Call for Papers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="sponsors.php">
+                        <i class="dripicons-user"></i>
+                        <span> Sponsors </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="venue.php">
+                        <i class="dripicons-document"></i>
+                        <span> Venue </span>
                     </a>
                 </li>
 

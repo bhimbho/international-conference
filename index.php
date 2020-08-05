@@ -6,16 +6,16 @@ include "includes/header.php";
 		<div class="main-slider-two">
 			<div class="main-slide-two">
 				<div class="main-slide-date"></div>
-				<div class="main-slider-bg" style="background-image: url(assets/img/bg-slider-home2.svg);"></div>
-				<img class="img-slide" src="assets/img/home-2-slide-1.png" alt="img">
+				<div class="main-slider-bg" style="background-image: url(assets/img/bg-slider.jpg);"></div>
+				<img class="img-slide" src="assets/img/" alt="img">
 				<div class="container">
 					<div class="main-slide-item">
 						<div class="date-slide">January 17, 2019 / Washington DC</div>
 						<h2><span>Conference on Software</span>Engineering Practices</h2>
 						<div class="slide-tag">#Web_Conference</div>
 						<div class="slide-btn-cover">
-							<a href="register.php" class="btn btn-yellow rounded-0">register now</a>
-							<a href="single-events.html" class="btn btn-border rounded-0">more details</a>
+							<a href="register.php" class="btn btn-yellow rounded-0">Registration/Submission</a>
+							<a href="about.php" class="btn btn-border rounded-0">Our Speakers</a>
 						</div>
 					</div>
 				</div>
@@ -66,18 +66,12 @@ include "includes/header.php";
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 about-info">
-					<h2 class="title-line-left">More Than a Conference</h2>
-					<div class="about-slogan-home-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do eiusmod tempor incididunt ut labore.</div>
+					<h2 class="title-line-left">Welcome Message</h2>
+					<!-- <div class="about-slogan-home-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do eiusmod tempor incididunt ut labore.</div> -->
 					<div class="about-info-text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<p><?= htmlspecialchars_decode($about->view_welcome()->welcome) ?></p>
 					</div>
-					<ul class="soc-link">
-						<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fab fa-facebook-f"></i></a></li>
-						<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fab fa-instagram"></i></a></li>
-						<li><a target="_blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
-						<li><a target="_blank" href="https://vimeo.com/"><i class="fab fa-vimeo"></i></a></li>
-					</ul>
-					<a href="events.html" class="btn btn-yellow rounded-0">read more</a>
+					<a href="about.php" class="btn btn-yellow rounded-0">About Us</a>
 				</div>
 				<div class="col-12 col-md-6 about-img">
 					<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
@@ -110,7 +104,7 @@ include "includes/header.php";
 						<h3><?= $speaker->name ?></h3>
 						<div class="prof"><?= $speaker->type ?></div>
 						<p><?= $speaker->profile ?></p>
-						
+						<a href="speaker-profile.php" class="btn btn-yellow">Profile</a>
 					</div>
 				</div>
 			<?php }?>
@@ -136,7 +130,7 @@ include "includes/header.php";
 						<i class="fa fa-chevron-left" aria-hidden="true"></i>
 					</div>
 					<div class="schedule-content">
-						
+						<div class="schedule-title"><?= $conf->description ?></div>
 					</div>
 				</li>
 			<?php }?>
@@ -166,12 +160,12 @@ include "includes/header.php";
 	<section class="s-partners partners-home-two">
 		<div class="container">
 			<div class="row">
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-1.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-2.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-3.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-4.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-5.png" alt="img"></div>
-				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/home-2-partner-6.png" alt="img"></div>
+				<?php 
+					$sponsor = $sponsors->all_sponsor();
+					foreach ($sponsor as $sponsor) {
+					?>
+				<div class="col-6 col-sm-4 col-md-2"><img class="lazy" src="uploads/sponsors/<?= $sponsor->sponsor_img?>" data-src="uploads/sponsors/<?= $sponsor->sponsor_img?>" alt="img"></div>
+			<?php }?>
 			</div>
 		</div>
 	</section>

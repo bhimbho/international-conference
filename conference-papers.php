@@ -3,13 +3,13 @@ include "includes/header.php";
 ?>
 
 <!--=================== PAGE-TITLE ===================-->
-<div class="page-title" style="background-image: url(assets/img/bg-page-title.jpg);">
+<div class="page-title" style="background-image: url(assets/img/bg-head.jpg);">
 	<div class="container">
-		<h1 class="title-line-left">Journals</h1>
+		<h1 class="title-line-left">Conference Papers</h1>
 		<div class="breadcrumbs">
 			<ul>
 				<li><a href="index.php">Home</a></li>
-				<li>Journals</li>
+				<li>Conference Papers</li>
 			</ul>
 		</div>
 	</div>
@@ -19,7 +19,7 @@ include "includes/header.php";
 <!--================= PAGE-CONTACTS =================-->
 <section class="page-contacts">
 	<div class="container">
-		<h2 class="title-line-left">Journals</h2>
+		<h2 class="title-line-left">Conference Papers</h2>
 		<div class="row">
 			<div class="col-md-8">
 				<?php
@@ -35,15 +35,15 @@ include "includes/header.php";
 						<img src="assets/img/about-1.jpg" class="img-fluid">
 					</div>
 					<div class="col-md-9">
-						<a href="view-journal.php" class="font-weight-bold h5 mb-3"><?= $get_new_journals->title?></a>
+						<a href="view-journal.php?pull=<?= $get_new_journals->new_upload_id?>" class="font-weight-bold h5 mb-3"><?= $get_new_journals->title?></a>
 						<p><?= substr($get_new_journals->abstract, 0, 150).'....' ?></p>
-						<a href="uploads/new_uploads/<?= $get_new_journals->file_name?>" class="btn mt-3 rounded-0">Download Journal</a>
+						<a href="uploads/new_uploads/<?= $get_new_journals->file_name?>" class="btn mt-3 rounded-0">Download Paper</a>
 					</div>
 				</div>	
 				<?php }?>		
 			</div>
 			<div class="col-md-4">
-				<h4 class="title-line-left mb-3">Search Journals</h4>
+				<h4 class="title-line-left mb-3">Search Paper</h4>
 				<form action="" method="post">
 					<div class="input-group">
 						<input type="text" name="search" class="form-control search-input rounded-0">
