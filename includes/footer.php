@@ -5,13 +5,13 @@
 				<div class="col-md-4">
 					<a href="index.html" class="logo-footer">
 						<img src="assets/img/logo.png" alt="logo">
-						<div class="logo-text"><span>info</span>rmex</div>
+						<div class="logo-text" style="font-size: 20px"><span>INtl.</span>Conference</div>
 					</a>
-					<div class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div>
+					<!-- <div class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div> -->
 					<ul class="soc-link">
-						<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fab fa-facebook-f"></i></a></li>
-						<li><a target="_blank" href="https://twitter.com/RovadexStudio"><i class="fab fa-twitter"></i></a></li>
-						<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fab fa-instagram"></i></a></li>
+						<li><a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+						<li><a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
 						<li><a target="_blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
 					</ul>
 				</div>

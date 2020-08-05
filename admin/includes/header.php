@@ -9,6 +9,7 @@ $reg_fee =  new registration_fee;
 $journal =  new journal;
 $sponsor =  new sponsor;
 $venue =  new venue;
+$about = new about();
 ?>
 <!DOCTYPE html>
 <html lang="en">

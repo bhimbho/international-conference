@@ -3,7 +3,7 @@ include "includes/header.php";
 ?>
 
 <!--=================== PAGE-TITLE ===================-->
-<div class="page-title" style="background-image: url(assets/img/bg-page-title.jpg);">
+<div class="page-title" style="background-image: url(assets/img/bg-head.jpg);">
 	<div class="container">
 		<h1 class="title-line-left">About Us</h1>
 		<div class="breadcrumbs">
@@ -22,15 +22,9 @@ include "includes/header.php";
 		<div class="row">
 			<div class="col-12 col-md-6">
 				<div class="overview-info">
-					<h2 class="title-line-left">Overview</h2>
-					<div class="overview-info-item">
-						<h5>Experience Since 2012</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam.</p>
-						<p>Elementum nibh tellus molestie nunc non blandit massa enim. Pretium aenean pharetra magna ac placerat vestibulum lectus.</p>
-					</div>
-					<div class="overview-info-item">
-						<h5>Our Mission</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam. Elementum nibh tellus molestie nunc non blandit massa enim.</p>
+					<!-- <h2 class="title-line-left">Overview</h2> -->
+					<div class="title-line-left">
+						<?= html_entity_decode($about->view_about()->about) ?>
 					</div>
 				</div>
 			</div>
@@ -50,7 +44,7 @@ include "includes/header.php";
 </section>
 <!--================== OVERVIEW END ==================-->
 <!--================= OUR-HISTORY END =================-->
-<section class="our-history s-title-bg">
+<!-- <section class="our-history s-title-bg">
 	<span class="title-bg">Our History</span>
 	<div class="container">
 		<div class="row">
@@ -61,7 +55,7 @@ include "includes/header.php";
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam.</p>
 						<p>Elementum nibh tellus molestie nunc non blandit massa enim. Pretium aenean pharetra magna ac placerat vestibulum lectus.</p>
 					</div>
-					<!-- <div class="overview-info-item">
+					<div class="overview-info-item">
 						<h5>Our Certificates</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim. </p>
 					</div>
@@ -76,7 +70,7 @@ include "includes/header.php";
 								<img src="assets/img/certificate-1.jpg" alt="img">
 							</a>
 						</div>
-					</div> -->
+					</div>
 				</div>
 			</div>
 			<div class="col-12 col-sm-6">
@@ -101,7 +95,7 @@ include "includes/header.php";
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!--================= OUR-HISTORY END =================-->
 
 <!--=================== S-OUR-TEAM ===================-->
@@ -119,46 +113,7 @@ include "includes/header.php";
 				<div class="prof">CEO, Infodex</div>
 
 			</div>
-			<div class="col-6 col-sm-4 team-item">
-				<a href="about.html" class="team-img">
-					<img src="assets/img/team-2.jpg" alt="team">
-				</a>
-				<h4 class="title"><a href="about.html">Marybeth Hoover</a></h4>
-				<div class="prof">CEO, IT Metrix</div>
-
-			</div>
-			<div class="col-6 col-sm-4 team-item">
-				<a href="about.html" class="team-img">
-					<img src="assets/img/team-3.jpg" alt="team">
-				</a>
-				<h4 class="title"><a href="about.html">Stewart Collins</a></h4>
-				<div class="prof">CEO, IT Metrix</div>
-
-			</div>
-			<div class="col-6 col-sm-4 team-item">
-				<a href="about.html" class="team-img">
-					<img src="assets/img/team-4.jpg" alt="team">
-				</a>
-				<h4 class="title"><a href="about.html">Anthony Watson</a></h4>
-				<div class="prof">CEO, Infodex</div>
-
-			</div>
-			<div class="col-6 col-sm-4 team-item">
-				<a href="about.html" class="team-img">
-					<img src="assets/img/team-5.jpg" alt="team">
-				</a>
-				<h4 class="title"><a href="about.html">Marybeth Hoover</a></h4>
-				<div class="prof">CEO, IT Metrix</div>
-
-			</div>
-			<div class="col-6 col-sm-4 team-item">
-				<a href="about.html" class="team-img">
-					<img src="assets/img/team-6.jpg" alt="team">
-				</a>
-				<h4 class="title"><a href="about.html">Stewart Collins</a></h4>
-				<div class="prof">CEO, IT Metrix</div>
-
-			</div>
+			
 		</div>
 	</div>
 </section>

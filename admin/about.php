@@ -17,7 +17,7 @@
                                 <li class="breadcrumb-item active">Dashboard</li>
                             </ol>
                         </div>
-                        <h4 class="page-title">Paper Guidelines</h4>
+                        <h4 class="page-title">About Us</h4>
                     </div>
                 </div>
             </div>     
@@ -27,21 +27,21 @@
                 <div class="col-md-12">
                     <div class="card-box">
                         <div class="col-md-8 offset-md-2">
-                            <?php 
+                             <?php 
                                 if(isset($_SESSION['err'])){?>
                                     <div class="alert alert-danger"><?= $_SESSION['err'] ?></div>
                                 <?php unset($_SESSION['err']);} if(isset($_SESSION['success'])) {?>
                                     <div class="alert alert-success"><?= $_SESSION['success'] ?></div>
                                 <?php unset($_SESSION['success']);}
                             ?>
-                            <h4 class="header-title mb-3">Paper Guidelines</h4>
+                            <h4 class="header-title mb-3">About Us</h4>
 
-                            <form method="post" action="logic/update_guideline.php">
+                            <form method="post" action="logic/about.php">
                                 <div class="form-group">
-                                   <textarea class="form-control" rows="10" id="summernote-editor" name="guideline"><?= $guideline->view_guideline()->guideline?></textarea>
+                                   <textarea class="form-control" rows="10" id="summernote-editor" name="about"><?= $about->view_about()->about?></textarea>
                                 </div>
                                 <div class="form-group">
-                                 <button type="submit" name="submit" class="btn btn-primary btn-block">Update Paper Guidelines</button>
+                                 <button type="submit" name="submit" class="btn btn-primary btn-block">Update About</button>
                              </div>
                          </form>
                      </div>

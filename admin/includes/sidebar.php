@@ -12,6 +12,18 @@
                     </a>
                 </li>
                 <li>
+                    <a href="welcome.php">
+                        <i class="dripicons-document"></i>
+                        <span> Welcome Message </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.php">
+                        <i class="dripicons-document"></i>
+                        <span> About </span>
+                    </a>
+                </li>
+                <li>
                     <a href="conference.php">
                         <i class="dripicons-meter"></i>
                         <span> Conference </span>

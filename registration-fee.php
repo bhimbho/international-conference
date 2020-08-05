@@ -3,7 +3,7 @@ include "includes/header.php";
 ?>
 
 <!--=================== PAGE-TITLE ===================-->
-<div class="page-title" style="background-image: url(assets/img/bg-page-title.jpg);">
+<div class="page-title" style="background-image: url(assets/img/bg-head.jpg);">
 	<div class="container">
 		<h1 class="title-line-left">Registration Fee</h1>
 		<div class="breadcrumbs">
