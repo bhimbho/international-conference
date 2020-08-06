@@ -64,7 +64,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Speaker's Profile</label>
-                                <textarea type="text" class="form-control" name="profile" placeholder="Enter Speaker Profile"></textarea>
+                                <textarea type="text" id="summernote-editor" class="form-control" name="profile" placeholder="Enter Speaker Profile"></textarea>
                             </div>
                             <div class="form-group">
                                <button type="submit" name="submit" class="btn btn-primary btn-block">Add Speaker</button>

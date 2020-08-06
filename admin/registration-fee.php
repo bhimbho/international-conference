@@ -49,8 +49,12 @@
                                 <input type="text" class="form-control" name="number" aria-describedby="emailHelp" placeholder="Enter Account Number">
                             </div>
                              <div class="form-group">
-                                <label for="exampleInputEmail1">Amount</label>
-                                <input type="text" class="form-control" name="amount" aria-describedby="emailHelp" placeholder="Enter Amount">
+                                <label for="exampleInputEmail1">Amount (Naira &#8358;)</label>
+                                <input type="text" class="form-control" name="amount" aria-describedby="emailHelp" placeholder="Enter Amount in Naira">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Amount (Dollar $)</label>
+                                <input type="text" class="form-control" name="amount" aria-describedby="emailHelp" placeholder="Enter Amount in Dollars">
                             </div>
                             <div class="form-group">
                                <button type="submit" name="submit" class="btn btn-primary btn-block">Add Account Details</button>

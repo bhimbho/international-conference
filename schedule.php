@@ -17,7 +17,7 @@ include "includes/header.php";
 <!--================= PAGE-TITLE END =================-->
 
 <!--================= PAGE-CONTACTS =================-->
-<section class="page-contacts">
+<section class="page-contacts" style="padding-top: 80px; padding-bottom: 80px;">
 	<div class="container">
 		<h2 class="title-line-left">Schedule Details</h2>
 		<div class="row">

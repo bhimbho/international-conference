@@ -72,10 +72,13 @@
 
 	<!--===================== SCRIPT	=====================-->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/libs/carousel/owl.carousel.js"></script>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
+	
 	<script src="assets/js/scripts.js"></script>
 </body>
 </html>

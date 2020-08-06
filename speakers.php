@@ -17,7 +17,7 @@ include "includes/header.php";
 	<!--================= PAGE-TITLE END =================-->
 
 	<!--=================== OUR-SPEAKERS ===================-->
-	<section class="our-speakers" style="margin-bottom: 6%;">
+	<section class="our-speakers" style="margin-bottom: 6%; padding-top: 80px; padding-bottom: 0px;">
 		<div class="container">
 			<h2 class="title-line">Our Speakers</h2>
 			<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>

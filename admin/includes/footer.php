@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    2018 - 2019 &copy; Greeva theme by FPI International Conference  
+                    2020 &copy; FPI International Conference  
                 </div>
             </div>
         </div>

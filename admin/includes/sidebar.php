@@ -30,6 +30,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="upcoming-conference.php">
+                        <i class="dripicons-meter"></i>
+                        <span> Upcoming Conference </span>
+                    </a>
+                </li>
+                <li>
                     <a href="speakers.php">
                         <i class="dripicons-user"></i>
                         <span> Speakers </span>

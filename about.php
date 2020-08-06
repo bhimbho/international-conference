@@ -17,7 +17,7 @@ include "includes/header.php";
 <!--================= PAGE-TITLE END =================-->
 
 <!--==================== OVERVIEW ====================-->
-<section class="overview">
+<section class="overview" style="padding-top: 80px; padding-bottom: 0px;">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-6">
@@ -30,13 +30,13 @@ include "includes/header.php";
 			</div>
 			<div class="col-12 col-md-6 overview-img-cover">
 				<div class="overview-img-cover">
-					<div class="overview-img">
-						<img src="assets/img/overview-1.jpg" alt="img">
-						<img src="assets/img/overview-2.jpg" alt="img">
+					<div class="overview-img" style="width: 100% !important; height: 25%;">
+						<img src="assets/img/overview-1.jpg" class="img-fluid" alt="img">
+						<img src="assets/img/overview-2.jpg" class="img-fluid" alt="img">
 					</div>
-					<div class="overview-img">
-						<img src="assets/img/overview-3.jpg" alt="img">
-					</div>
+					<!-- <div class="overview-img"> -->
+						<!-- <img src="assets/img/overview-3.jpg" class="img-fluid" alt="img" style="border: 2px solid red; object-fit: none !important;"> -->
+					<!-- </div> -->
 				</div>
 			</div>
 		</div>
@@ -99,7 +99,7 @@ include "includes/header.php";
 <!--================= OUR-HISTORY END =================-->
 
 <!--=================== S-OUR-TEAM ===================-->
-<section class="s-our-team about-team">
+<section class="s-our-team about-team" style="padding-top: 80px; padding-bottom: 0px;">
 	<div class="our-team-bg" style="background-image: url(assets/img/bg-team-about.svg);"></div>
 	<div class="container">
 		<h2 class="title-line">Our Team</h2>
@@ -120,7 +120,7 @@ include "includes/header.php";
 <!--================= S-OUR-TEAM END =================-->
 
 <!--================ S-UPCOMING-COURSE ================-->
-<section class="s-upcoming-course s-title-bg">
+<section class="s-upcoming-course s-title-bg" style="padding-top: 50px; padding-bottom: 80px;">
 	<span class="title-bg-left">Upcoming Conference</span>
 	<div class="container">
 		<h2 class="title-line">Upcoming Conference</h2>
@@ -135,7 +135,7 @@ include "includes/header.php";
 							<div class="name">The Plaza Center</div>
 						</div>
 					</div>
-					<h3 class="title"><a href="events.html">Information Technology in The Banking Sector</a></h3>
+					<h3 class="title"><a>Information Technology in The Banking Sector</a></h3>
 					<div class="upcoming-course-adr">
 						<i class="fas fa-map-marker-alt"></i>
 						<p>768 Fifth Avenue New York, <br>NY 10019  <span>|</span>  The Plaza Center</p>

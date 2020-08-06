@@ -17,7 +17,7 @@ include "includes/header.php";
 <!--================= PAGE-TITLE END =================-->
 
 <!--================= PAGE-CONTACTS =================-->
-<section class="page-contacts">
+<section class="page-contacts" style="padding-top: 80px; padding-bottom: 80px;">
 	<div class="container">
 		<?php
 			$pull = $journal->view_specific_new_journal($_GET['pull']);

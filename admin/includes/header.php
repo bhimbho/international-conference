@@ -22,10 +22,11 @@ $about = new about();
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/FPI--Logo1.png">
-
+         <link rel="stylesheet" type="text/css" href="assets/libs/carousel/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/carousel/owl.theme.default.css">
         <!-- jvectormap -->
         <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
-
+        
         <!-- DataTables -->
         <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
@@ -40,6 +41,7 @@ $about = new about();
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
         <!-- Summernote css -->
         <link href="assets/libs/summernote/summernote-bs4.css" rel="stylesheet" />
+       
 
     </head>
 
