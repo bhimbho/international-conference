@@ -21,26 +21,28 @@ include "includes/header.php";
 <section class="our-speakers" style="margin-bottom: 6%; padding-top: 80px; padding-bottom: 0px;">
 	<div class="container">
 		<?php
-			$speaker =$speakers->view_speaker($_GET['speaker_id']);
-			?>
+		$speaker =$speakers->view_speaker($_GET['speaker_id']);
+		?>
 		<h2 class="title-line">Our Speakers</h2>
 		<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>
-		<div class="our-speakers-cover">
+		<div class="our-speakers-cover" style="height: auto !important;">
 			<div class="col-md-12 ">
 				<div class="row profile-holder">
-					<div class="col-md-2 profile-card py-4"></div>
-					<div class="col-md-10 py-4"></div>
+					<div class="col-md-3 profile-card py-4">
+						<img src="uploads/speakers_picture/<?= $speaker->picture ?>" class="img-fluid profile-img">
+						<h5 class="text-center"><?= $speaker->name ?></h5>
+						<p class="text-center text-white"><?= $speaker->type ?></p>
+					</div>
+					<div class="col-md-9 profile-details pt-3 pb-4">
+						<?= html_entity_decode($speaker->profile) ?>
+					</div>
 				</div>
 				<div class="container profile-page">
 					<div class="row">
 						<div class="col-md-3">
-							<img src="uploads/speakers_picture/<?= $speaker->picture ?>" class="img-fluid profile-img">
-							<h5 class="text-center"><?= $speaker->name ?></h5>
-							<p class="text-center"><?= $speaker->type ?></p>
+							
 						</div>
-						<div class="col-md-9 profile-details">
-							<?= html_entity_decode($speaker->profile) ?>
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -56,20 +58,12 @@ include "includes/footer.php";
 .profile-holder{
 	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
 	position: relative;
-	height: 140vh;
 }
 .profile-card{
 	background-color: #188F8B;
 	height: auto;
 }
-.profile-page{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 90%;
-	height: auto;
-}
+
 .profile-img{
 	margin-top: 50px;
 	border-top-left-radius: 50px;
@@ -77,19 +71,7 @@ include "includes/footer.php";
 
 }
 @media(max-width: 576px){
-	.profile-holder{
-		height: 220vh;
-	}
-	.profile-card{
-		height: 30vh;
-	}
-	.profile-page{
-		width: 100%;
-		height: 220vh;
-	}
-	.profile-img{
-		margin-top: 50px;
-	}
+
 	.profile-details{
 		padding-top: 20px;
 	}
