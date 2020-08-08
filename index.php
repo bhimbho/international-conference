@@ -2,6 +2,7 @@
 include "includes/header.php";
 ?>
 <!--==================== MAIN-TWO ====================-->
+
 <section class="main-two">
 	<div class="main-slider-two">
 		<div class="main-slide-two">
@@ -10,17 +11,17 @@ include "includes/header.php";
 			<img class="img-slide" src="assets/img/" alt="img">
 			<div class="container">
 				<div class="main-slide-item">
-					<div class="date-slide"><?= $conference->conference_slider()->date ?></div>
-					<h2 style="font-size: 20px;"><span><?= $conference->conference_slider()->theme ?></span>
-					<?= $conference->conference_slider()->sub_theme ?></h2>
-					<div class="slide-tag">#Virtual Conference</div>
-					<div class="slide-btn-cover">
-						<a href="register.php" class="btn btn-yellow rounded-0">Registration/Submission</a>
-						<a href="speakers.php" class="btn btn-border rounded-0">Our Speakers</a>
+					<div class="date-slide mt-5"><?= $conference->conference_slider()->date ?></div>
+					<h2 style="font-size: 20px; line-height: 30px;"><span class="big-text font-weight-bold" style="font-size: 32px; line-height: 50px"><?= $conference->conference_slider()->theme ?></span>
+						<?= $conference->conference_slider()->sub_theme ?></h2>
+						<div class="slide-tag">#Virtual Conference</div>
+						<div class="slide-btn-cover">
+							<a href="register.php" class="btn btn-yellow rounded-0">Registration/Submission</a>
+							<a href="speakers.php" class="btn btn-border rounded-0">Our Speakers</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 		<!-- <div class="main-slide-two">
 			<div class="main-slide-date"></div>
 			<div class="main-slider-bg" style="background-image: url(assets/img/bg-slider-home2.svg);"></div>
@@ -65,7 +66,7 @@ include "includes/header.php";
 <!--==================== S-ABOUT ====================-->
 <section class="s-about-home-two" style="padding-top: 0px;">
 	<div class="container" style="padding-top: 80px; padding-bottom: 50px;">
-		<div class="row">
+		<div class="row about-page">
 			<div class="col-12 col-md-6 about-info">
 				<h2 class="title-line-left">Welcome Message</h2>
 				<!-- <div class="about-slogan-home-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do eiusmod tempor incididunt ut labore.</div> -->
@@ -74,9 +75,9 @@ include "includes/header.php";
 				</div>
 				<a href="about.php" class="btn btn-yellow rounded-0">About Us</a>
 			</div>
-			<div class="col-12 col-md-6">
+			<div class="col-12 col-md-6 about-image">
 
-					<img src="uploads/welcome.jpeg" data-src="uploads/welcome.jpeg" alt="welcome-spech-creator" style="height: 500px; min-width: 100%">
+				<img src="uploads/welcome.jpeg" data-src="uploads/welcome.jpeg" alt="welcome-spech-creator" style="height: 500px; min-width: 100%">
 
 			</div>
 		</div>
@@ -176,7 +177,7 @@ include "includes/header.php";
 <!--=================== S-VENUE END ===================-->
 
 <!--==================== S-PARTNERS ====================-->
-<section class="s-partners partners-home-two">
+<!-- <section class="s-partners partners-home-two">
 	<div class="container">
 		<div class="row">
 			<?php 
@@ -187,13 +188,31 @@ include "includes/header.php";
 				<?php }?>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!--================== S-PARTNERS END ==================-->
 	<?php
 	include "includes/footer.php";
 	?>
-	<script>
-		$(function(){
+	<style type="text/css">
+	@media(max-width: 576px){
+		.main-slide-item .big-text{
+			font-size: 20px !important;
+			line-height: 30px !important;
+		}
+		.main-slide-item h2{
+			font-size: 14px !important;
+		}
+		.about-info{
+			order: 1;
+		}
+		.about-image img{
+			height: 300px !important; 
+			min-width: 100%;
+		}
+	}
+</style>
+<script>
+	$(function(){
 		$('.owl-carousel').owlCarousel({
 			loop:true,
 			margin:20,
