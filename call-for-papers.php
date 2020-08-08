@@ -19,11 +19,18 @@ include "includes/header.php";
 <!--================= PAGE-CONTACTS =================-->
 <section class="page-contacts" style="padding-top: 80px; padding-bottom: 80px;">
 	<div class="container">
-		<h2 class="title-line-left">Publication Archives</h2>
+		<h2 class="title-line-left">Call for paper</h2>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="row">
-					<div class="col-md-6 mb-3">
+					<div class="col-md-12 mb-3">
+						<div class="card">
+							<div class="card-body">
+								<?= html_entity_decode($callpapers->view_callpapers()->call_papers) ?>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-md-6 mb-3">
 						<div class="card">
 							<div class="card-body">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -34,19 +41,7 @@ include "includes/header.php";
 								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6 mb-3">
-						<div class="card">
-							<div class="card-body">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</div>
-						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			

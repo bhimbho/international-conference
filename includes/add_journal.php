@@ -18,10 +18,10 @@ session_start();
 				$_SESSION['success'] = "Registration Complete";
 				header("location: ../register.php");
 			}
-			else{
-				$_SESSION['err'] = "Something Went Wrong";
-				header("location: ../register.php");
-			}
+			// else{
+			// 	$_SESSION['err'] = "Something Went Wrong";
+			// 	header("location: ../register.php");
+			// }
 		}
 		else{
 			$_SESSION['err'] = "File is incompatible for upload";

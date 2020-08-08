@@ -42,6 +42,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="our-team.php">
+                        <i class="dripicons-user"></i>
+                        <span> Our Team </span>
+                    </a>
+                </li>
+                <li>
                     <a href="important-date.php">
                         <i class="dripicons-calendar"></i>
                         <span> Important Dates </span>

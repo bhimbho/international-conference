@@ -7,55 +7,16 @@ class journal extends db{
     }
 
     public function view_all_journals(){ 
-        $query = $this->execute("SELECT * FROM `journal`", []);
+        $query = $this->execute("SELECT * FROM `journal` LEFT JOIN participant ON journal.journal_id=participant.journal_id", []);
         return $this->f_all();
     }
 
     public function view_specific_journal($journal_id){
     	$journal_id = DB::Validate($journal_id);
-        $query = $this->execute("SELECT * FROM `journal` WHERE journal_id = ?", [$journal_id]);
+        $query = $this->execute("SELECT * FROM `journal` LEFT JOIN participant ON journal.journal_id=participant.journal_id WHERE journal.journal_id = ?", [$journal_id]);
         return $this->f_one();
     }
 
-    public function editors_pick(){
-        $admin = $this->execute("SELECT * FROM `journal` LEFT JOIN volume ON journal.volume_id = volume.volume_id  WHERE editors_pick = ? AND publish_status = ? ORDER BY journal_id DESC LIMIT 3", [1,1]);
-        return $this->f_all();
-    }
-
-    public function search_by_volume($volume_id){ 
-    	$volume_id = DB::Validate($volume_id);
-        $admin = $this->execute("SELECT * FROM `journal` WHERE volume_id = ?", [$volume_id]);
-        return $this->f_all();
-    }
-
-     public function view_specific_journal_w_volume($journal_id){ 
-     	$journal_id = DB::Validate($journal_id);
-        $admin = $this->execute("SELECT * FROM `journal` LEFT JOIN volume ON journal.volume_id = volume.volume_id WHERE journal_id = ?", [$journal_id]);
-        return $this->f_one();
-    }
-
-    public function admin_details($admin_id){
-        $admin = $this->execute("SELECT * FROM `admin` WHERE `admin_id`=?", [$admin_id]);
-        return $this->fetch_all();
-    }
-    
-     public function all_volumes(){ 
-        $admin = $this->execute("SELECT * FROM `volume`", []);
-        return $this->f_all();
-    }
-    public function get_volume($volume_id){ 
-        $admin = $this->execute("SELECT * FROM `volume` WHERE volume_id = ?", [$volume_id]);
-        return $this->f_one();
-    }
-
-    public function assign_volume($journal_id,$volume_id){ 
-        if($admin = $this->execute("UPDATE journal SET `volume_id` =?, publish_status = ? WHERE journal_id = ?", [$volume_id,1,$journal_id])){
-        	return true;
-        }
-        else{
-        	return false;
-        }
-    }
 
      public function add_journal($title,$abstract,$file,$pages,$authors,$fname,$lname,$email,$phone,$institution){ 
      	/**
@@ -63,8 +24,16 @@ class journal extends db{
 		*
 		**/
 		$now = date('Y-m-d');
-        if($query = $this->execute("INSERT INTO journal(`title`, `abstract`, `file`, `page_no`, `authors`, `firstname`, `lastname`, `email`, `phone`,`institution`, `upload_date`) VALUES (?,?,?,?,?,?,?,?,?,?,?)", [$title,$abstract,$file,$pages,$authors,$fname,$lname,$email,$phone,$institution,$now])){
-        	return true;
+        if($query = $this->execute("INSERT INTO journal(`title`, `abstract`, `file`, `page_no`, `authors`, `email`, `phone`,`institution`, `upload_date`) VALUES (?,?,?,?,?,?,?,?,?)", [$title,$abstract,$file,$pages,$authors,$email,$phone,$institution,$now])){
+        	$new_query = $this->execute("SELECT max(journal_id) FROM journal", []);
+            $new_query = $new_query->fetchColumn();
+            // var_dump($new_query);
+            if($query = $this->execute("INSERT INTO participant(`firstname`, `lastname`,`journal_id`, `date_created`) VALUES (?,?,?,?)", [$fname,$lname,$new_query,$now])){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
         	return false;
@@ -91,13 +60,13 @@ class journal extends db{
     }
 
     public function view_all_new_journals(){ 
-        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id ORDER BY new_upload_id ASC", []);
+        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id LEFT JOIN journal.journal_id=participant.journal_id ORDER BY new_upload_id ASC", []);
         return $this->f_all();
     }
 
     public function view_specific_new_journal($id){ 
         $id = DB::Validate($id);
-        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id WHERE new_upload_id =? ORDER BY new_upload_id ASC", [$id]);
+        $admin = $this->execute("SELECT * FROM `new_upload` LEFT JOIN journal ON new_upload.participant_id = journal.journal_id LEFT JOIN journal.journal_id=participant.journal_id WHERE new_upload_id =? ORDER BY new_upload_id ASC", [$id]);
         return $this->f_one();
     }
 
@@ -134,6 +103,13 @@ class journal extends db{
         else{
         	return false;
         }
+    }
+
+    //------------------------- certificate ----------------------
+public function search_certificate($search_val){ 
+        $search_val = DB::text_val($search_val);
+        $admin = $this->execute("SELECT * FROM `participant` LEFT JOIN journal ON participant.journal_id = journal.journal_id WHERE MATCH(`participant`.`firstname`,`participant`.`lastname`) AGAINST(? IN NATURAL LANGUAGE MODE)", [$search_val]);
+        return $this->f_all();
     }
 }
 

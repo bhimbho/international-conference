@@ -24,15 +24,18 @@ include "includes/header.php";
 			<div class="col-12 col-sm-4 page-cont-info text-center">
 				<i class="fas fa-map-marker-alt fa-3x contact-icon"></i>
 				<h5>Address</h5>
-				<p>7100 Athens Place <br>Washington, DC 20521</p>
+				<p>The Federal Polytechnic<br>Ilaro</p>
 			</div>
 			
 			<div class="col-12 col-sm-4 page-cont-info text-center">
 				<i class="fa fa-phone fa-3x contact-icon" aria-hidden="true"></i>
 				<h5>Phones</h5>
 				<ul class="cont-phone">
-					<li><a href="tel:18001234567">1-800-1234-567</a></li>
-					<li><a href="tel:18008763765">1-800-8763-765</a></li>
+					<li><a href="tel:+2348036896807">+2348036896807</a></li>
+					<li><a href="tel:+234 803 713 3216">+234 803 713 3216</a></li>
+					<li><a href="tel:+234 805 353 4214">+234 805 353 4214</a></li>
+					<li><a href="tel:+234 803 410 3100">+234 803 410 3100</a></li>		
+							
 				</ul>
 				
 			</div>
@@ -41,7 +44,7 @@ include "includes/header.php";
 				<i class="fa fa-envelope fa-3x contact-icon" aria-hidden="true"></i>
 				<h5>Email</h5>
 				<ul class="cont-email">
-					<li><a href="mailto:informex@info.mail">informex@info.mail</a></li>
+					<li><a href="mailto:informex@info.mail">fpi2ndinterconf@federalpolyilaro.edu.ng</a></li>
 				</ul>
 				
 			</div>

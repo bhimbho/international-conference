@@ -35,23 +35,56 @@
                             ?>
                         <h4 class="header-title mb-3">Upcoming Conference</h4>
 
-                        <form method="post" action="logic/conference.php">
+                        <form method="post" action="logic/add_up_conference.php" enctype="multipart/form-data">
                              <div class="form-group">
                                 <label for="exampleInputEmail1">Conference Image</label>
-                                <input type="file" class="form-control" name="theme" aria-describedby="emailHelp" placeholder="Enter Conference Theme">
+                                <input type="file" class="form-control dropify" name="file" aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Conference Theme</label>
                                 <input type="text" class="form-control" name="theme" aria-describedby="emailHelp" placeholder="Enter Conference Theme">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Conference Sub-Theme</label>
-                                <input type="text" class="form-control" name="subtheme" aria-describedby="emailHelp" placeholder="Enter Conference Sub-theme">
+                            <p>Conference Date E.g (3rd March, 2020)</p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Day E.g (1st)</label>
+                                        <input type="text" class="form-control" name="d" placeholder="4th">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Month</label>
+                                        <select type="text" class="form-control" name="m" >
+                                            <option value="">Month</option>
+                                            <option value="January">January</option>
+                                            <option value="February">February</option>
+                                            <option value="March">March</option>
+                                            <option value="April">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Year</label>
+                                        <select type="text" class="form-control" name="y">
+                                            <option value="">Year</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Conference Date</label>
-                                <input type="text" class="form-control" name="date" placeholder="3rd of June 2020 to 4th June 2020">
-                            </div>
+                            
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Conference Venue</label>
                                 <textarea class="form-control" name="venue" placeholder="Enter Conference Venue" rows="5"></textarea>
@@ -70,30 +103,25 @@
                         <thead>
                             <tr>
                                 <th>S/N</th>
-                                <th>Conference Image</th>
                                 <th>Conference Theme</th>
-                                <th>Conference Sub Theme</th>
                                 <th>Conference Date</th>
                                 <th>Conference Venue</th>
-                                <th>Action</th>
+                                <th>Conference Image</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                $conf = $conference->all_conference();
-                                $count = 0;
-                                foreach ($conf as $conf) {?>
+                                $conf = $conference->view_up_conference();
+                                $count = 0;?>
+                            
                                     
                             <tr>
                                 <td><?= ++$count?></td>
-                                <td><?= ++$count?></td>
-                                <td><?= $conf->theme?></td>
-                                <td><?= $conf->sub_theme?></td>
-                                <td><?= $conf->date?></td>
-                                <td><?= $conf->venue?></td>
-                                <td><a href="" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal" arial-data="<?= $conf->conference_id ?>">Edit</a> <a href="logic/delete_conference.php?conf_id=<?= $conf->conference_id ?>" class="btn btn-danger">Delete</a></td>
+                                <td><?= $conf->up_theme?></td>
+                                <td><?= $conf->location?></td>
+                                <td><?= $conf->day.' | '.$conf->month.' | '.$conf->year ?></td>
+                                <td><img src="../uploads/upcoming_conference/<?= $conf->up_picture?>" width="100" height="100"></td>                            
                             </tr>
-                        <?php }?>
                         </tbody>
                     </table>
                 </div>
