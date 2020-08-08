@@ -41,6 +41,7 @@
 				<div class="col-sm-6 col-md-4 contact">
 					<h6>Location</h6>
 					<ul class="footer-contacts">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0280661393767!2d2.9854211140952907!3d6.88724162074018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b0f130995e199%3A0x84cea4dce7cefb57!2sFederal%20Polytechnic%2C%20Ilaro!5e0!3m2!1sen!2sng!4v1596907621592!5m2!1sen!2sng" width="300" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 						<!-- <li>
 							<i class="fas fa-map-marker-alt"></i>
 							<a href="contacts.html">7100 Athens Place <br>Washington, DC 20521</a>
