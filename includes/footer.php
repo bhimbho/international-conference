@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<a href="index.html" class="logo-footer">
+					<a href="index.php" class="logo-footer">
 						<img src="assets/img/logo.png" alt="logo">
 						<div class="logo-text" style="font-size: 20px"><span>INtl.</span>Conference</div>
 					</a>
@@ -20,23 +20,28 @@
 					<ul class="footer-contacts">
 						<li>
 							<i class="fas fa-map-marker-alt"></i>
-							<a href="">7100 Athens Place <br>Washington, DC 20521</a>
+							<a href="https://federalpolyilaro.edu.ng">The <br>Federal Polyhtechnic Ilaro</a>
 						</li>
 						<li>
 							<i class="fa fa-phone" aria-hidden="true"></i>
-							<a href="tel:18001234567">1-800-1234-567</a>
-							<a href="tel:18008763765">1-800-8763-765</a>
+
+
+
+							<a href="tel:+2348036896807">+2348036896807</a>
+							<a href="tel:+234 803 713 3216">+234 803 713 3216</a>
+							<a href="tel:+234 805 353 4214">+234 805 353 4214</a>
+							<a href="tel:+234 803 410 3100">+234 803 410 3100</a>
 						</li>
 						<li>
 							<i class="fa fa-envelope" aria-hidden="true"></i>
-							<a href="mailto:informex@info.mail">informex@info.mail</a>
+							<a href="mailto:informex@info.mail">fpi2ndinterconf@federalpolyilaro.edu.ng</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-sm-6 col-md-4 contact">
-					<h6>Contacts</h6>
+					<h6>Location</h6>
 					<ul class="footer-contacts">
-						<li>
+						<!-- <li>
 							<i class="fas fa-map-marker-alt"></i>
 							<a href="contacts.html">7100 Athens Place <br>Washington, DC 20521</a>
 						</li>
@@ -48,7 +53,7 @@
 						<li>
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 							<a href="mailto:informex@info.mail">informex@info.mail</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 				

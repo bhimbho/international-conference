@@ -11,7 +11,6 @@ session_start();
 		}
 		// $obj = json_decode(json_encode($arr_data), true);
 		// $obj->fname;
-		var_dump($arr_data[5]);
 		$file_upload = $validate->fileUploadValidateDoc('../../uploads/speakers_picture/','speaker_img');
 		if($file_upload != 0){
 			if($speakers->add_speakers($arr_data[0],$arr_data[1],$arr_data[2],$file_upload,$arr_data[5],$arr_data[3],$arr_data[4])){

@@ -52,14 +52,10 @@
                                 <label for="exampleInputEmail1">Conference Date</label>
                                 <input type="text" class="form-control" name="date" placeholder="3rd of June 2020 to 4th June 2020">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Conference Venue</label>
-                                <textarea class="form-control" name="venue" placeholder="Enter Conference Venue" rows="5"></textarea>
-                            </div>
-                            <div class="form-group">
+                           <!--  <div class="form-group">
                                 <label for="exampleInputEmail1">About</label>
                                 <textarea class="form-control" name="about" placeholder="Enter About" rows="5"></textarea>
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                <button type="submit" name="submit" class="btn btn-primary btn-block">Add Conference</button>
                            </div>
@@ -76,7 +72,6 @@
                                 <th>Conference Theme</th>
                                 <th>Conference Sub Theme</th>
                                 <th>Conference Date</th>
-                                <th>Conference Venue</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -91,7 +86,6 @@
                                 <td><?= $conf->theme?></td>
                                 <td><?= $conf->sub_theme?></td>
                                 <td><?= $conf->date?></td>
-                                <td><?= $conf->venue?></td>
                                 <td><a href="" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal" arial-data="<?= $conf->conference_id ?>">Edit</a> <a href="logic/delete_conference.php?conf_id=<?= $conf->conference_id ?>" class="btn btn-danger">Delete</a></td>
                             </tr>
                         <?php }?>

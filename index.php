@@ -10,17 +10,18 @@ include "includes/header.php";
 			<img class="img-slide" src="assets/img/" alt="img">
 			<div class="container">
 				<div class="main-slide-item">
-					<div class="date-slide">January 17, 2019 / Washington DC</div>
-					<h2><span>Conference on Software</span>Engineering Practices</h2>
-					<div class="slide-tag">#Web_Conference</div>
+					<div class="date-slide"><?= $conference->conference_slider()->date ?></div>
+					<h2 style="font-size: 20px;"><span><?= $conference->conference_slider()->theme ?></span>
+					<?= $conference->conference_slider()->sub_theme ?></h2>
+					<div class="slide-tag">#Virtual Conference</div>
 					<div class="slide-btn-cover">
 						<a href="register.php" class="btn btn-yellow rounded-0">Registration/Submission</a>
-						<a href="about.php" class="btn btn-border rounded-0">Our Speakers</a>
+						<a href="speakers.php" class="btn btn-border rounded-0">Our Speakers</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="main-slide-two">
+		<!-- <div class="main-slide-two">
 			<div class="main-slide-date"></div>
 			<div class="main-slider-bg" style="background-image: url(assets/img/bg-slider-home2.svg);"></div>
 			<img class="img-slide" src="assets/img/home-2-slide-2.png" alt="img">
@@ -51,7 +52,7 @@ include "includes/header.php";
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="main-arrow-cover">
 		<div class="container">
@@ -73,10 +74,10 @@ include "includes/header.php";
 				</div>
 				<a href="about.php" class="btn btn-yellow rounded-0">About Us</a>
 			</div>
-			<div class="col-12 col-md-6 about-img">
-				<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-					<img class="lazy" src="assets/img/placeholder-all.png" data-src="assets/img/news-2.jpg" alt="img">
-				</a>
+			<div class="col-12 col-md-6">
+
+					<img src="uploads/welcome.jpeg" data-src="uploads/welcome.jpeg" alt="welcome-spech-creator" style="height: 500px; min-width: 100%">
+
 			</div>
 		</div>
 	</div>
@@ -98,12 +99,11 @@ include "includes/header.php";
 
 			<div class="speaker-item">
 				<div class="speaker-item-img">
-					<img class="lazy" src="uploads/speakers_picture/<?= $speaker->picture ?>" data-src="uploads/speakers_picture/<?= $speaker->picture ?>" alt="img">
+					<img class="lazy" src="uploads/speakers_picture/<?= $speaker->picture ?>" data-src="uploads/speakers_picture/<?= $speaker->picture ?>" alt="img" style="height: 350px">
 				</div>
 				<div class="speaker-item-content">
 					<h3><?= $speaker->name ?></h3>
 					<div class="prof"><?= $speaker->type ?></div>
-					<p><?= $speaker->profile ?></p>
 					<a href="speaker-profile.php" class="btn btn-yellow">Profile</a>
 				</div>
 			</div>

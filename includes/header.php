@@ -10,6 +10,8 @@ $journal =  new journal;
 $venue =  new venue;
 $sponsors =  new sponsor;
 $about =  new about;
+$team =  new ourteam;
+$callpapers = new callpapers;
 ?>
 <!DOCTYPE html>
 <html lang="zxx">

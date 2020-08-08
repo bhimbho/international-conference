@@ -32,8 +32,8 @@ include "includes/header.php";
 					<div class="speaker-item-content">
 						<h3><?= $speaker->name ?></h3>
 						<div class="prof"><?= $speaker->type ?></div>
-						<p><?= $speaker->profile ?></p>
-						<a href="speaker-profile.php" class="btn btn-yellow">Profile</a>
+						<!-- <p><?= $speaker->profile ?></p> -->
+						<a href="speaker-profile.php?speaker_id=<?=  $speaker->speaker_id ?>" class="btn btn-yellow">Profile</a>
 					</div>
 				</div>
 			<?php }?>

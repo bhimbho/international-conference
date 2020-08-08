@@ -18,16 +18,16 @@ include "includes/header.php";
 		    <span aria-hidden="true">&times;</span>
 		  </button>
 		</div>
-		<form>
+		<form method="post">
 			<div class="row">
 				<div class="col-md-8">
 					<div class="form-group">
-						<input type="text" name="" class="form-control" id="certName" placeholder="Enter your name">
+						<input type="text" name="search" class="form-control" id="certName" placeholder="Enter your name">
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="form-group">
-						<button class="btn genCert">Generate Certificate</button>
+						<button class="btn genCert" name="submit">Generate Certificate</button>
 					</div>
 				</div>
 			</div>
@@ -39,6 +39,18 @@ include "includes/header.php";
 <!--================= PAGE-CONTACTS =================-->
 <section class="page-contacts" style="padding-top: 80px; padding-bottom: 80px;">
 	<div class="container">
+		<div>
+			<?php
+				if (isset($_POST['submit'])) {
+					$result = $journal->search_certificate($journal->text_val($_POST['submit']));
+					foreach ($result as $result) {?>
+			<span class="badge badge-success">asas</span>
+			<span class="badge badge-success">asas</span>
+			<?php 	# code...
+					}
+				}
+			?>
+		</div>
 		<div class="row certificate-body">
 			<div class="col-12 cert-holder" id="content" style="">
 				<img src="assets/img/cert.jpg" class="certificate-image">

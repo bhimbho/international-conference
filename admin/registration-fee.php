@@ -54,7 +54,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Amount (Dollar $)</label>
-                                <input type="text" class="form-control" name="amount" aria-describedby="emailHelp" placeholder="Enter Amount in Dollars">
+                                <input type="text" class="form-control" name="amount_in_dollars" aria-describedby="emailHelp" placeholder="Enter Amount in Dollars">
                             </div>
                             <div class="form-group">
                                <button type="submit" name="submit" class="btn btn-primary btn-block">Add Account Details</button>

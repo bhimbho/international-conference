@@ -17,7 +17,7 @@
                                 <li class="breadcrumb-item active">Dashboard</li>
                             </ol>
                         </div>
-                        <h4 class="page-title">Speakers</h4>
+                        <h4 class="page-title">Our Team</h4>
                     </div>
                 </div>
             </div>     
@@ -33,9 +33,9 @@
                                     <div class="alert alert-success"><?= $_SESSION['success'] ?></div>
                                 <?php unset($_SESSION['success']);}
                             ?>
-                        <h4 class="header-title mb-3">Speakers</h4>
+                        <h4 class="header-title mb-3">Our Team</h4>
 
-                        <form method="post" action="logic/add_speaker.php" enctype="multipart/form-data">
+                        <form method="post" action="logic/add_team.php" enctype="multipart/form-data">
                             <div class="for-group">
                                 <div class="col-md-8 offset-md-2 text-center">
                                 <input type="file" name="speaker_img" class="form-control dropify">
@@ -43,63 +43,73 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Speaker's Name</label>
+                                <label for="exampleInputEmail1">Team's Full Name</label>
                                 <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter Speaker Name">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Speaker's Institution</label>
-                                <input type="text" class="form-control" name="institution" aria-describedby="emailHelp" placeholder="Enter Speaker Institution">
+                                <label for="exampleInputEmail1">Team's Title e.g Asst Director</label>
+                                <input type="text" class="form-control" name="position" aria-describedby="emailHelp" placeholder="Enter Speaker Institution">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Speaker's Email Address</label>
-                                <input type="text" class="form-control" name="emal" aria-describedby="emailHelp" placeholder="Enter Speaker's Email Address">
+                                <label for="exampleInputEmail1">Team's Position</label>
+                                <select class="form-control" name="order" >
+                                    <option value="">---Select Order ---</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Speaker's Type</label>
-                                <input type="text" class="form-control" name="type" aria-describedby="emailHelp" placeholder="Enter Speaker Type">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Speaker's Order</label>
-                                <input type="text" class="form-control" name="order" placeholder="Enter Speaker Order {1 or 2 ...}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Speaker's Profile</label>
-                                <textarea type="text" class="form-control" name="profile" placeholder="Enter Speaker Profile"></textarea>
-                            </div>
-                            <div class="form-group">
-                               <button type="submit" name="submit" class="btn btn-primary btn-block">Add Speaker</button>
+                               <button type="submit" name="submit" class="btn btn-primary btn-block">Add Team</button>
                            </div>
                        </form>
                    </div> <!-- end card-box -->
                </div>
                <div class="col-md-8">
                    <div class="card-box">
-                       <h4 class="header-title mb-3">Modify Speaker's Details</h4>
+                       <h4 class="header-title mb-3">Modify Our Team's Details</h4>
                        <table id="datatable" class="table table-bordered dt-responsive nowrap">
                         <thead>
                             <tr>
                                 <th>S/N</th>
-                                <th>Speaker's Name</th>
-                                <th>Speaker's Picture</th>
-                                <th>Speaker Type</th>
-                                <th>Speaker's Institution</th>
-                                <th>Speaker's Email</th>
+                                <th>Our Team's Name</th>
+                                <th>Our Team's Picture</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                              <?php
-                                $speaker = $speakers->all_speakers();
+                                $team = $team->all_team();
                                 $count = 0;
-                                foreach ($speaker as $speaker) {?>
+                                foreach ($team as $team) {?>
                             <tr>
                                 <td><?= ++$count?></td>
-                                <td><?= $speaker->name?></td>
-                                <td><img src="../uploads/speakers_picture/<?= $speaker->picture?>" width="100" height="100"></td>
-                                <td><?= $speaker->type?></td>
-                                <td><?= $speaker->institution?></td>
-                                <td><?= $speaker->address?></td>
-                                <td><a href="" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal">Edit</a> <a href="logic/delete_speaker.php?speaker_id=<?= $speaker->speaker_id?>" class="btn btn-danger waves-effect waves-light">Delete</a></td>
+                                <td><?= $team->team_name?></td>
+                                <td><img src="../uploads/teams/<?= $team->team_pic?>" width="100" height="100"></td>
+                               
+                                <td><a href="" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal">Edit</a> <a href="logic/delete_team.php?team_id=<?= $team->team_id?>" class="btn btn-danger waves-effect waves-light">Delete</a></td>
                             </tr>
                         <?php }?>
                         </tbody>

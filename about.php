@@ -103,17 +103,20 @@ include "includes/header.php";
 	<div class="our-team-bg" style="background-image: url(assets/img/bg-team-about.svg);"></div>
 	<div class="container">
 		<h2 class="title-line">Our Team</h2>
-		<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>
+		<!-- <p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p> -->
 		<div class="row team-cover">
+			<?php 
+				$team = $team->all_team();
+				foreach ($team as $team) {?>
 			<div class="col-6 col-sm-4 team-item">
 				<a href="about.html" class="team-img">
-					<img src="assets/img/team-1.jpg" alt="team">
+					<img src="uploads/teams/<?= $team->team_pic ?>" alt="team" style="object-fit: contain, width: 100%; height: 100%">
 				</a>
-				<h4 class="title"><a href="about.html">Anthony Watson</a></h4>
-				<div class="prof">CEO, Infodex</div>
+				<h4 class="title"><?= $team->team_name ?></h4>
+				<div class="prof"><?= $team->team_pos ?></div>
 
 			</div>
-			
+			<?php }?>
 		</div>
 	</div>
 </section>
@@ -124,27 +127,29 @@ include "includes/header.php";
 	<span class="title-bg-left">Upcoming Conference</span>
 	<div class="container">
 		<h2 class="title-line">Upcoming Conference</h2>
-		<p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+		<!-- <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
 		<div class="upcoming-course-cover">
 			<div class="course-item-left">
 				<div class="upcoming-course-item">
 					<div class="date-cover">
-						<div class="day">12</div>
+						<div class="day"><?= $conference->view_up_conference()->day?></div>
 						<div class="date-info">
-							<div class="month">november, 2018</div>
-							<div class="name">The Plaza Center</div>
+							<div class="month"><?= $conference->view_up_conference()->month.' '.$conference->view_up_conference()->year?></div>
+							<!-- <div class="name">The Plaza Center</div> -->
 						</div>
 					</div>
-					<h3 class="title"><a>Information Technology in The Banking Sector</a></h3>
+					<h3 class="title"><a><?= $conference->view_up_conference()->up_theme?></a></h3>
 					<div class="upcoming-course-adr">
 						<i class="fas fa-map-marker-alt"></i>
-						<p>768 Fifth Avenue New York, <br>NY 10019  <span>|</span>  The Plaza Center</p>
+						<p><?= $conference->view_up_conference()->location?></p>
 					</div>
-					<a href="single-events.html" class="btn">register</a>
+					<!-- <a href="single-events.html" class="btn">register</a> -->
 				</div>
 			</div>
 			<div class="upcoming-course-img">
-				<img src="assets/img/curses-1.jpg" alt="img">
+				<!-- <img src="uploads/upcoming_conference/<?= $conference->view_up_conference()->up_picture?>" alt="upcoming conference"> -->
+				<img src="assets/img/upcoming.jpg" alt="upcoming conference">
+				<!-- assets/img/upcoming.jpg -->
 			</div>
 		</div>
 	</div>

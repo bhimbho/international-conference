@@ -20,6 +20,9 @@ include "includes/header.php";
 <!--=================== OUR-SPEAKERS ===================-->
 <section class="our-speakers" style="margin-bottom: 6%; padding-top: 80px; padding-bottom: 0px;">
 	<div class="container">
+		<?php
+			$speaker =$speakers->view_speaker($_GET['speaker_id']);
+			?>
 		<h2 class="title-line">Our Speakers</h2>
 		<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>
 		<div class="our-speakers-cover">
@@ -31,41 +34,12 @@ include "includes/header.php";
 				<div class="container profile-page">
 					<div class="row">
 						<div class="col-md-3">
-							<img src="assets/img/choose-1.jpg" class="img-fluid profile-img">
-							<h5 class="text-center">Font Awesome</h5>
-							<p class="text-center">PhD, Msc, Bsc, PDP, NNPC, GDP</p>
+							<img src="uploads/speakers_picture/<?= $speaker->picture ?>" class="img-fluid profile-img">
+							<h5 class="text-center"><?= $speaker->name ?></h5>
+							<p class="text-center"><?= $speaker->type ?></p>
 						</div>
 						<div class="col-md-9 profile-details">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<?= html_entity_decode($speaker->profile) ?>
 						</div>
 					</div>
 				</div>

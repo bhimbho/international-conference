@@ -36,6 +36,7 @@ class speakers extends db
 	**/
 	public function view_speaker($speaker_id)
 	{
+		$this->Validate($speaker_id);
 		$query = $this->execute("SELECT * FROM `speakers` WHERE `speaker_id`=?", [$speaker_id]);
         return $this->f_one();
 	}

@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
         // $obj->fname;
         //var_dump($arr_data);
         
-            if($registration_fee->update_registration_fee($arr_data[0],$arr_data[1],$arr_data[2],$arr_data[3])){
+            if($registration_fee->update_registration_fee($arr_data[0],$arr_data[1],$arr_data[2],$arr_data[3],$arr_data[4])){
                 $_SESSION['success'] = "Registration Fee updated";
                 header("location: ../registration-fee.php");
             }
