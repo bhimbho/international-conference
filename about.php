@@ -43,60 +43,6 @@ include "includes/header.php";
 	</div>
 </section>
 <!--================== OVERVIEW END ==================-->
-<!--================= OUR-HISTORY END =================-->
-<!-- <section class="our-history s-title-bg">
-	<span class="title-bg">Our History</span>
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-sm-6">
-				<div class="our-history-left">
-					<h2 class="title-line-left">Our History</h2>
-					<div class="overview-info-item">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam.</p>
-						<p>Elementum nibh tellus molestie nunc non blandit massa enim. Pretium aenean pharetra magna ac placerat vestibulum lectus.</p>
-					</div>
-					<div class="overview-info-item">
-						<h5>Our Certificates</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim. </p>
-					</div>
-					<div class="history-cert">
-						<div class="history-cert-img">
-							<a href="assets/img/certificate-1.jpg" data-fancybox="gallery2">
-								<img src="assets/img/certificate-1.jpg" alt="img">
-							</a>
-						</div>
-						<div class="history-cert-img">
-							<a href="assets/img/certificate-1.jpg" data-fancybox="gallery2">
-								<img src="assets/img/certificate-1.jpg" alt="img">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6">
-				<div class="history-info-cover">
-					<div class="history-info">
-						<h4 class="title"><span>2012-2014. </span>Our Establishment</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam. Elementum nibh tellus molestie.</p>
-					</div>
-					<div class="history-info">
-						<h4 class="title"><span>2014. </span>The Early Days</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam.</p>
-					</div>
-					<div class="history-info">
-						<h4 class="title"><span>2015-2016. </span>Prosperity of Company</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam.</p>
-					</div>
-					<div class="history-info">
-						<h4 class="title"><span>2017-2018. </span>Worldwide Recognition</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua. Ut enim ad minim veniam.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-<!--================= OUR-HISTORY END =================-->
 
 <!--=================== S-OUR-TEAM ===================-->
 <section class="s-our-team about-team" style="padding-top: 80px; padding-bottom: 0px;">
@@ -109,8 +55,8 @@ include "includes/header.php";
 				$team = $team->all_team();
 				foreach ($team as $team) {?>
 			<div class="col-6 col-sm-4 team-item">
-				<a href="about.html" class="team-img">
-					<img src="uploads/teams/<?= $team->team_pic ?>" alt="team" style="object-fit: contain, width: 100%; height: 100%">
+				<a href="" class="team-img">
+					<img src="uploads/teams/<?= $team->team_pic ?>" alt="team" style="object-fit: contain, width: 100%; min-height: 25em">
 				</a>
 				<h4 class="title"><?= $team->team_name ?></h4>
 				<div class="prof"><?= $team->team_pos ?></div>
@@ -156,31 +102,14 @@ include "includes/header.php";
 </section>
 <!--============== S-UPCOMING-COURSE END ==============-->
 
-<!--==================== S-COUNTER ====================-->
-<!-- <section class="s-counter counter-animate counter-active s-bg">
-	<div class="mask" style="background-image: url(assets/img/bg-effect-counter.svg);"></div>
-	<div class="container">
-		<div class="row counter-cover">
-			<div class="col-6 col-sm-3 counter-item">
-				<div class="counter-number"><span data-number="28">0</span></div>
-				<h5>speakers</h5>
-			</div>
-			<div class="col-6 col-sm-3 counter-item">
-				<div class="counter-number"><span data-number="3">0</span>k</div>
-				<h5>happy customers</h5>
-			</div>
-			<div class="col-6 col-sm-3 counter-item">
-				<div class="counter-number"><span data-number="650">0</span></div>
-				<h5>Places</h5>
-			</div>
-			<div class="col-6 col-sm-3 counter-item">
-				<div class="counter-number"><span data-number="350">0</span></div>
-				<h5>Podcasts</h5>
-			</div>
-		</div>
-	</div>
-</section> -->
 <!--================== S-COUNTER END ==================-->
 <?php
 include "includes/footer.php";
 ?>
+<style type="text/css">
+@media screen and (max-width: 576px){
+	.team-img img{
+		min-height: 15em !important;
+	}
+}
+</style>

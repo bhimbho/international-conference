@@ -27,7 +27,7 @@ include "includes/header.php";
 					foreach ($speaker as $speaker) {?>
 				<div class="speaker-item">
 					<div class="speaker-item-img">
-						<img class="lazy" src="uploads/speakers_picture/<?= $speaker->picture ?>" data-src="uploads/speakers_picture/<?= $speaker->picture ?>" alt="img">
+						<img class="lazy" src="uploads/speakers_picture/<?= $speaker->picture ?>" data-src="uploads/speakers_picture/<?= $speaker->picture ?>" alt="speaker image" style="height: 350px">
 					</div>
 					<div class="speaker-item-content">
 						<h3><?= $speaker->name ?></h3>
