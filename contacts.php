@@ -63,7 +63,7 @@ include "includes/footer.php";
 		border-radius: 50%;
 		margin-bottom: 10px;
 	}
-	.fas{
+	.fas.contact-icon{
 		padding: 25px 30px 25px 30px;
 	}
 </style>

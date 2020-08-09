@@ -31,10 +31,10 @@ include "includes/header.php";
 						}
 						foreach ($get_new_journals as $get_new_journals) { ?>
 				<div class="row journal-holder">
-					<div class="col-md-3">
+					<!-- <div class="col-md-3">
 						<img src="assets/img/about-1.jpg" class="img-fluid">
-					</div>
-					<div class="col-md-9">
+					</div> -->
+					<div class="col-md-12">
 						<a href="view-journal.php?pull=<?= $get_new_journals->new_upload_id?>" class="font-weight-bold h5 mb-3"><?= $get_new_journals->title?></a>
 						<p><?= substr($get_new_journals->abstract, 0, 150).'....' ?></p>
 						<a href="uploads/new_uploads/<?= $get_new_journals->file_name?>" class="btn mt-3 rounded-0">Download Paper</a>
