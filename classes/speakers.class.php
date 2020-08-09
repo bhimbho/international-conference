@@ -22,7 +22,7 @@ class speakers extends db
 	**/
 	public function all_speakers_limit()
 	{
-		$query = $this->execute("SELECT * FROM `speakers` ORDER BY `speaker_order` ASC LIMIT 3", []);
+		$query = $this->execute("SELECT * FROM `speakers` ORDER BY `speaker_order` ASC LIMIT 4", []);
         return $this->f_all();
 	}
 

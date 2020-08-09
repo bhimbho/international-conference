@@ -24,7 +24,7 @@ include "includes/header.php";
 		$speaker =$speakers->view_speaker($_GET['speaker_id']);
 		?>
 		<h2 class="title-line">Our Speakers</h2>
-		<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>
+		<p class="slogan">They possess the secret knowledge and interesting experience worth listening to.</p>
 		<div class="our-speakers-cover" style="height: auto !important;">
 			<div class="col-md-12 ">
 				<div class="row profile-holder">

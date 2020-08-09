@@ -48,7 +48,7 @@ include "includes/header.php";
 									</tr>
 									<tr>
 										<td><span class="font-weight-bold">Amount  </span></td>
-										<td><span> &#8358;<?= $reg_fee->amount.' | &dollar;'.$reg_fee->amount_in_dollar ?></span></td>
+										<td><span>Local Fee &#8358;<?= $reg_fee->amount.' | International Fee: &dollar;'.$reg_fee->amount_in_dollar ?></span></td>
 									</tr>
 
 								</table>

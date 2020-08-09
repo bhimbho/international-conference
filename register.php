@@ -68,7 +68,7 @@ include "includes/header.php";
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" name="page_no" class="form-control rounded-0" placeholder="150">
+								<input type="text" name="page_no" class="form-control rounded-0" placeholder="1-10">
 							</div>
 						</div>
 						<div class="col-md-12">

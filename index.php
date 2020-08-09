@@ -70,7 +70,7 @@ include "includes/header.php";
 	<div class="container" style="padding-top: 80px; padding-bottom: 50px;">
 		<div class="row about-page">
 			<div class="col-12 col-md-6 about-info">
-				<h2 class="title-line-left">Welcome Message</h2>
+				<h2 class="title-line-left">Welcome</h2>
 				<!-- <div class="about-slogan-home-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do eiusmod tempor incididunt ut labore.</div> -->
 				<div class="about-info-text">
 					<p><?= htmlspecialchars_decode($about->view_welcome()->welcome) ?></p>
@@ -94,11 +94,13 @@ include "includes/header.php";
 	<span class="title-position title-position-right">Experts</span>
 	<div class="container">
 		<h2 class="title-line">Our Speakers</h2>
-		<p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p>
+		<p class="slogan">They possess the secret knowledge and interesting experience worth listening to.</p>
 		<div class="our-speakers-cover">
 			<?php
 			$speaker = $speakers->all_speakers_limit();
-			foreach ($speaker as $speaker) {?>
+			$disable_count = 0;
+			foreach ($speaker as $speaker) {
+				$disable_count++; ?>
 
 			<div class="speaker-item">
 				<div class="speaker-item-img">
@@ -107,7 +109,8 @@ include "includes/header.php";
 				<div class="speaker-item-content">
 					<h3><?= $speaker->name ?></h3>
 					<div class="prof"><?= $speaker->type ?></div>
-					<a href="speaker-profile.php?speaker_id=<?= $speaker->speaker_id ?>" class="btn btn-yellow">Profile</a>
+					<?php 
+					if($disable_count != 1){?><a href="speaker-profile.php?speaker_id=<?= $speaker->speaker_id ?>" class="btn btn-yellow">Profile</a><?php }?>
 				</div>
 			</div>
 			<?php }?>

@@ -14,13 +14,13 @@ $team =  new ourteam;
 $callpapers = new callpapers;
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en-us">
 <head>
 	<meta charset="UTF-8">
-	<title>Informex</title>
+	<title>2nd International Conference (FPI)</title>
 	<!-- ===================== META ===================== -->
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="International Conference website. Access all conference paper and submit papers">
+	<meta name="description" content="2nd International Conference for Federal Polytechnic Ilaro. Paper presented and paper catalogue">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="shortcut icon" href="assets/img/FPI--Logo2.png">
@@ -86,7 +86,7 @@ $callpapers = new callpapers;
 									<ul>
 										<li><a href="guideline.php">Guidelines</a></li>
 										<li><a href="conference-papers.php">Conference Papers</a></li>
-										<li><a href="call-for-papers.php">Call for paper</a></li>
+										<li><a href="call-for-papers.php">Call for Papers</a></li>
 										<li><a href="registration-fee.php">Registration Fee</a></li>
 									</ul>
 								</li>
