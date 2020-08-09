@@ -31,7 +31,7 @@ include "includes/header.php";
 				<i class="fa fa-phone fa-3x contact-icon" aria-hidden="true"></i>
 				<h5>Phones</h5>
 				<ul class="cont-phone">
-					<li><a href="tel:+2348036896807">+2348036896807</a></li>
+					<li><a href="tel:+234 803 689 6807">+234 803 689 6807</a></li>
 					<li><a href="tel:+234 803 713 3216">+234 803 713 3216</a></li>
 					<li><a href="tel:+234 805 353 4214">+234 805 353 4214</a></li>
 					<li><a href="tel:+234 803 410 3100">+234 803 410 3100</a></li>		

@@ -18,7 +18,7 @@ include "includes/header.php";
 		    <span aria-hidden="true">&times;</span>
 		  </button>
 		</div>
-		<form method="post">
+		<form method="post" action="">
 			<div class="row">
 				<div class="col-md-8">
 					<div class="form-group">
@@ -42,10 +42,11 @@ include "includes/header.php";
 		<div>
 			<?php
 				if (isset($_POST['submit'])) {
-					$result = $journal->search_certificate($journal->text_val($_POST['submit']));
+					echo '<h5>Click on your name?</h5>';
+					$result = $journal->search_certificate(strtolower($journal->text_val($_POST['search'])));
+					// var_dump($result);
 					foreach ($result as $result) {?>
-			<span class="badge badge-success">asas</span>
-			<span class="badge badge-success">asas</span>
+			<a href=""><span class="badge badge-success" aria-label="<?= $result->title?>"><?= ucwords($result->firstname.' '.$result->lastname) ?></span></a>
 			<?php 	# code...
 					}
 				}
@@ -55,7 +56,7 @@ include "includes/header.php";
 			<div class="col-12 cert-holder" id="content" style="">
 				<img src="assets/img/cert.jpg" class="certificate-image">
 				<h2 class="certiticate-name"></h2>
-				<p class="paper-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<p class="paper-title"></p>
 			</div>
 			<div class="col-12 text-center mt-5">
 				<button class="btn downloadCert">Download Certificate</button>
@@ -77,9 +78,10 @@ include "includes/footer.php";
 		$(".alert-danger").hide();
 		$(".certificate-body").hide();
 		$(".certificate-image").hide();
-		$(".genCert").click(function(e){
+		$("a .badge").click(function(e){
 			e.preventDefault();
-			var certName = $('#certName').val();
+			var certName = $(this).text();
+			var title = $(this).attr('aria-label');
 			if(certName == ''){
 				$(".alert-danger").show();
 			}
@@ -87,6 +89,7 @@ include "includes/footer.php";
 				$(".certificate-body").show();
 				$(".certificate-image").show();
 				$(".certiticate-name").text(certName);
+				$(".paper-title").text(title);
 			}
 		});
 

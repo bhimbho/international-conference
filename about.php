@@ -102,7 +102,7 @@ include "includes/header.php";
 <section class="s-our-team about-team" style="padding-top: 80px; padding-bottom: 0px;">
 	<div class="our-team-bg" style="background-image: url(assets/img/bg-team-about.svg);"></div>
 	<div class="container">
-		<h2 class="title-line">Our Team</h2>
+		<h2 class="title-line">Conference Organizing Committee</h2>
 		<!-- <p class="slogan">They possess the secret knowledge and interesting experience of creating a digital product.</p> -->
 		<div class="row team-cover">
 			<?php 
