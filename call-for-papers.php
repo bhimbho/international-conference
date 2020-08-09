@@ -5,11 +5,11 @@ include "includes/header.php";
 <!--=================== PAGE-TITLE ===================-->
 <div class="page-title" style="background-image: url(assets/img/bg-head.jpg);">
 	<div class="container">
-		<h1 class="title-line-left">Call for Paper</h1>
+		<h1 class="title-line-left">Call for Papers</h1>
 		<div class="breadcrumbs">
 			<ul>
 				<li><a href="index.php">Home</a></li>
-				<li>Call for Paper</li>
+				<li>Call for Papers</li>
 			</ul>
 		</div>
 	</div>
@@ -19,7 +19,7 @@ include "includes/header.php";
 <!--================= PAGE-CONTACTS =================-->
 <section class="page-contacts" style="padding-top: 80px; padding-bottom: 80px;">
 	<div class="container">
-		<h2 class="title-line-left">Call for paper</h2>
+		<h2 class="title-line-left">Call for papers</h2>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="row">

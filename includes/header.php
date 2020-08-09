@@ -62,7 +62,7 @@ $callpapers = new callpapers;
 					<div class="col-12 col-md-6 col-lg-3 logo-two-cover">
 						<a href="/index.php" class="logo-footer">
 							<img src="assets/img/logo.png" alt="logo">
-							<div class="logo-text" style="font-size: 20px"><span>INtl.</span>Conference</div>
+							<div class="logo-text" style="font-size: 20px"><span>2ND INtl.</span>Conference</div>
 						</a>
 					</div>
 					<div class="col-3 header-top-info"></div>

@@ -11,9 +11,11 @@ include "includes/header.php";
 			<img class="img-slide" src="assets/img/" alt="img">
 			<div class="container">
 				<div class="main-slide-item">
-					<div class="date-slide mt-5"><?= $conference->conference_slider()->date ?></div>
+					<h2 class="text-warning mb-0 intl-conf" style="font-size: 40px; line-height: 30px; margin-top: 150px; ">2ND INTERNATIONAL CONFERENCE</h2>
+					<h4 class="text-warning">The Federal Polytechnic, Ilaro</h4>
+					<div class="date-slide mt-2 "><?= $conference->conference_slider()->date ?></div>
 					<h2 style="font-size: 20px; line-height: 30px;"><span class="big-text font-weight-bold" style="font-size: 32px; line-height: 50px"><?= $conference->conference_slider()->theme ?></span>
-						<?= $conference->conference_slider()->sub_theme ?></h2>
+	</h2>
 						<div class="slide-tag">#Virtual Conference</div>
 						<div class="slide-btn-cover">
 							<a href="register.php" class="btn btn-yellow rounded-0">Registration/Submission</a>
@@ -105,7 +107,7 @@ include "includes/header.php";
 				<div class="speaker-item-content">
 					<h3><?= $speaker->name ?></h3>
 					<div class="prof"><?= $speaker->type ?></div>
-					<a href="speaker-profile.php" class="btn btn-yellow">Profile</a>
+					<a href="speaker-profile.php?speaker_id=<?= $speaker->speaker_id ?>" class="btn btn-yellow">Profile</a>
 				</div>
 			</div>
 			<?php }?>
@@ -130,9 +132,9 @@ include "includes/header.php";
 					<div class="schedule-title"><?= $conf->event ?></div>
 					<i class="fa fa-chevron-left" aria-hidden="true"></i>
 				</div>
-				<div class="schedule-content">
+				<!-- <div class="schedule-content">
 					<div class="schedule-title"><?= $conf->description ?></div>
-				</div>
+				</div> -->
 			</li>
 			<?php }?>
 		</ul>
@@ -208,6 +210,9 @@ include "includes/header.php";
 		.about-image img{
 			height: 300px !important; 
 			min-width: 100%;
+		}
+		.intl-conf{
+			margin-top: 50px !important;
 		}
 	}
 </style>
